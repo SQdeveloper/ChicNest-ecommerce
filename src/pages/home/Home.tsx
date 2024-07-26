@@ -1,31 +1,23 @@
-import Button from "../../components/ui/Button";
+import { AwardIcon, ShieldIcon, StackIcon, TruckIcon } from "../../components/ui/icons";
+import CardBenefits from "./components/CardBenefits";
+import Hero from "./components/Hero";
 
 const Home = () => {
     return (
-        <div className="bg-light-brown height-svh w-full justify-between px-9 py-4 flex gap-8 items-center">
-            <div>
-                <h2 className="flex flex-col gap-4 font-primary text-6xl text-dark-gray">
-                    <div>Experience the</div>
-                    <div className="flex gap-4 items-center">
-                        <span>Brillance of</span>
-                        <img className="w-24 h-11 rounded-full object-cover object-center" src="../../src/assets/images/image.jpg" alt="collar" />
-                    </div>
-                    <div>Craftsmanship</div>                        
-                </h2>
-                <p className="font-secondary mt-6 mb-8 text-rat-gray">Discover a world Where beauty meets craftsmanship, where every piece of jewerly tell a story.</p>
-                <Button/>
+        <>
+            <Hero/>
+            <div className="py-16 px-10 bg-white">
+                <section className="flex relative py-8 justify-between rounded-md bg-extra-light-gray">
+                    <CardBenefits children={<AwardIcon className="style-card-cardBenefits"/>} title="Certified" description="Avaible certificates of authenticy"/>                                                            
+                    <div className="bg-light-gray w-[2px]"></div>
+                    <CardBenefits children={<ShieldIcon className="style-card-cardBenefits"/>} title="Secure" description="Certified marketplace since 2024"/>                                        
+                    <div className="bg-light-gray w-[2px]"></div>
+                    <CardBenefits children={<TruckIcon className="style-card-cardBenefits"/>} title="Shipping" description="Free, fast, and reilable worldwide"/>                                        
+                    <div className="bg-light-gray w-[2px]"></div>
+                    <CardBenefits children={<StackIcon className="style-card-cardBenefits"/>} title="Transparent" description="Hassle-free return policy"/>                                        
+                </section>
             </div>
-            <div className="flex gap-11">
-                <img 
-                    src="https://images.pexels.com/photos/27221212/pexels-photo-27221212/free-photo-of-mujer-modelo-maqueta-retrato.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" 
-                    className="border-r-[1px] border-b-[1px] border-dark-gray pr-2 w-60 aspect-[5/7] rounded-t-full rounded-b-md"
-                />
-                <img 
-                    src="https://images.pexels.com/photos/16734787/pexels-photo-16734787/free-photo-of-moda-mujer-modelo-maqueta.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt="" 
-                    className="border-r-[1px] border-t-[1px] border-dark-gray pr-2 w-60 aspect-[5/7] rounded-t-md rounded-b-full"
-                />
-            </div>
-        </div>
+        </>        
     );
 };
 
