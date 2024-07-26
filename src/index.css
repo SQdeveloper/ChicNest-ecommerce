@@ -13,5 +13,5 @@
 @layer components {
     .height-svh {
         height: calc(100svh - 4rem);
-    }
+    }        
 }
