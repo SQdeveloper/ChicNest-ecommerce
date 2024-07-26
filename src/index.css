@@ -14,4 +14,8 @@
     .height-svh {
         height: calc(100svh - 4rem);
     }        
+
+    .style-card-cardBenefits {
+        @apply w-12 h-12 rounded-full p-3 bg-white border border-brown text-brown
+    }
 }
