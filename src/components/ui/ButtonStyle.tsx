@@ -13,7 +13,7 @@ const ButtonStyle = () => {
             </div>
             <div className="absolute z-30 gap-1 top-[4px] left-[5px] w-full border border-light-brown rounded-[3px] bg-brown h-full flex justify-center items-center">
                 <span>Shop Now</span>                
-                <ArrowLeftDown className="w-4"/>
+                <ArrowLeftDown className="w-3.5"/>
             </div>            
         </Link>
     );

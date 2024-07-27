@@ -5,23 +5,23 @@ const Header = () => {
     return (
         <header className="w-full px-8 items-center border-b-[1px] border-light-gray flex justify-between gap-2 h-16 text-dark-gray font-secondary bg-light-brown">
             <nav>
-                <ul className="flex items-center gap-4">
+                <ul className="flex items-center gap-4 text-md">
                     <li>
-                        <Link className="border-b-[1px] border-dark-gray pb-1" to={''}>Home</Link>
+                        <Link className="ancle-style" to={''}>Home</Link>
                     </li>
                     <li>
-                        <Link to={''}>Shop</Link>
+                        <Link className="ancle-style" to={''}>Shop</Link>
                     </li>
                     <li>
-                        <Link to={''}>About Us</Link>
+                        <Link className="ancle-style" to={''}>About Us</Link>
                     </li>
                     <li>
-                        <Link to={''}>Pages</Link>
+                        <Link className="ancle-style" to={''}>Pages</Link>
                     </li>
                 </ul>
             </nav>
             <div>
-                <h1 className="font-bold text-2xl font-primary">ChicNest</h1>
+                <h1 className="font-bold text-3xl font-primary">ChicNest</h1>
             </div>
             <div className="flex items-center gap-7">
                 <div className="flex w-64 border border-light-gray rounded-full py-1.5 px-3.5 text-sm">

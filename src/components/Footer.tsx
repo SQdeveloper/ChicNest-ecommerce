@@ -21,48 +21,48 @@ const Footer = () => {
             <aside>
                 <h3 className="mb-2 font-bold">Pages</h3>
                 <ul className="text-sm flex flex-col gap-2 text-rat-gray">
-                    <li>
-                        <Link to={''}>Home</Link>                        
+                    <li className="w-fit">
+                        <Link className="ancle-style" to={''}>Home</Link>                        
                     </li>
-                    <li>
-                        <Link to={''}>About us</Link>                        
+                    <li className="w-fit">
+                        <Link className="ancle-style" to={''}>About us</Link>                        
                     </li>
-                    <li>
-                        <Link to={''}>Shop</Link>                        
+                    <li className="w-fit">
+                        <Link className="ancle-style" to={''}>Shop</Link>                        
                     </li>
-                    <li>
-                        <Link to={''}>Contact us</Link>                        
+                    <li className="w-fit">
+                        <Link className="ancle-style" to={''}>Contact us</Link>                        
                     </li>
                 </ul>
             </aside>
             <aside>
                 <h3 className="mb-2 font-bold">Resource</h3>
                 <ul className="text-sm flex flex-col gap-2 text-rat-gray">
-                    <li>
-                        <Link to={''}>FAQ</Link>                        
+                    <li className="w-fit">
+                        <Link className="ancle-style" to={''}>FAQ</Link>                        
                     </li>
-                    <li>
-                        <Link to={''}>Reviews</Link>                        
+                    <li className="w-fit">
+                        <Link className="ancle-style" to={''}>Reviews</Link>                        
                     </li>                
-                    <li>
-                        <Link to={''}>Return Policy</Link>                        
+                    <li className="w-fit">
+                        <Link className="ancle-style" to={''}>Return Policy</Link>                        
                     </li>
                 </ul>
             </aside>
             <aside>
                 <h3 className="mb-2 font-bold">Categories</h3>
                 <ul className="text-sm flex flex-col gap-2 text-rat-gray">
-                    <li>
-                        <Link to={''}>Anillos</Link>                        
+                    <li className="w-fit">
+                        <Link className="ancle-style" to={''}>Anillos</Link>                        
                     </li>
-                    <li>
-                        <Link to={''}>Collares</Link>                        
+                    <li className="w-fit">
+                        <Link className="ancle-style" to={''}>Collares</Link>                        
                     </li>
-                    <li>
-                        <Link to={''}>Pulseras</Link>                        
+                    <li className="w-fit">
+                        <Link className="ancle-style" to={''}>Pulseras</Link>                        
                     </li>
-                    <li>
-                        <Link to={''}>Pircings</Link>                        
+                    <li className="w-fit">
+                        <Link className="ancle-style" to={''}>Pircings</Link>                        
                     </li>
                 </ul>
             </aside>

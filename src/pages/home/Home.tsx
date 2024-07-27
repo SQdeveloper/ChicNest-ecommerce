@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import FeaturedSection from "./components/FeaturedSection";
 import BannerSection from "./components/BannerSection";
 import InstragramSection from "./components/InstragramSection";
+import PromotionSection from "./components/PromotionSection";
 
 const Home = () => {
     return (
@@ -47,9 +48,10 @@ const Home = () => {
                     </div>
                 </section>
                 <FeaturedSection/>
-            </div>
+                <PromotionSection/>
+            </div>            
             <BannerSection/>
-            <InstragramSection/>
+            <InstragramSection/>            
         </>        
     );
 };
