@@ -10,7 +10,7 @@ const BannerSection = () => {
                     className="h-[38rem] w-full object-cover rounded-xl"
                 />
                 <img 
-                    src="https://images.pexels.com/photos/177332/pexels-photo-177332.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                    src="../../src/assets/images/collar.jpg" 
                     alt="banner" 
                     className="absolute left-0 bottom-0 h-[20rem] border-4 border-light-brown w-36 rounded-full object-cover object-center"
                 />                
