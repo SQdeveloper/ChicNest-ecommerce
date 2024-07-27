@@ -5,14 +5,14 @@ const BannerSection = () => {
         <div className="flex gap-8 mb-12 px-10 py-12 bg-light-brown items-center">
             <div className="w-[50%] relative pb-12 pl-[4.5rem]">
                 <img 
-                    src="../../src/assets/images/model_featured.jpg" 
+                    src="../../src/assets/images/model2.jpg" 
                     alt="banner" 
                     className="h-[38rem] w-full object-cover rounded-xl"
                 />
                 <img 
-                    src="../../src/assets/images/model_featured.jpg" 
+                    src="https://images.pexels.com/photos/177332/pexels-photo-177332.jpeg?auto=compress&cs=tinysrgb&w=400" 
                     alt="banner" 
-                    className="absolute left-0 bottom-0 h-[20rem] border-4 border-light-brown w-36 rounded-full object-cover"
+                    className="absolute left-0 bottom-0 h-[20rem] border-4 border-light-brown w-36 rounded-full object-cover object-center"
                 />                
             </div>
             <section className="w-[50%]">

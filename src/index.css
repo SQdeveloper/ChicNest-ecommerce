@@ -18,4 +18,9 @@
     .style-card-cardBenefits {
         @apply w-12 h-12 rounded-full p-3 bg-white border border-brown text-brown
     }
+
+    .grid-place {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(300px, 1fr));        
+    }
 }

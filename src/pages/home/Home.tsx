@@ -4,6 +4,7 @@ import CardBenefits from "./components/CardBenefits";
 import Hero from "./components/Hero";
 import FeaturedSection from "./components/FeaturedSection";
 import BannerSection from "./components/BannerSection";
+import InstragramSection from "./components/InstragramSection";
 
 const Home = () => {
     return (
@@ -48,6 +49,7 @@ const Home = () => {
                 <FeaturedSection/>
             </div>
             <BannerSection/>
+            <InstragramSection/>
         </>        
     );
 };
