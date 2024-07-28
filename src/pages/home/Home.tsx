@@ -25,7 +25,7 @@ const Home = () => {
                     </section>
                 </div>
                 <section className="relative flex gap-8 justify-between items-center">
-                    <div className="flex gap-4 rounded-md bg-[#FAFAFA] w-[50%] justify-between items-center">
+                    <div className="flex gap-4 rounded-md bg-extra-light-gray w-[50%] justify-between items-center">
                         <aside className="font-secondary pl-8 py-6 ">
                             <h3 className="font-primary text-2xl">Luxe Abundance</h3>
                             <p className="mt-2 mb-5 text-rat-gray">Get 20% off with our code: LUXE20</p>
@@ -34,9 +34,13 @@ const Home = () => {
                                 <ArrowRightIcon className="w-4"/>
                             </Link>
                         </aside>
-                        <img className="w-64 h-52 object-cover" src="https://www.joyeriamurguia.com/2698-home_default/dije-de-mariposa-calada.jpg" alt="banner" />
+                        <img 
+                            className="w-64 h-52 object-cover" 
+                            src="https://la.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-anillo-lv-volt-multi-de-oro-blanco--Q9O63D_PM2_Front%20view.png?wid=490&hei=490" 
+                            alt="banner" 
+                        />
                     </div>
-                    <div className="flex gap-4 rounded-md bg-[#FAFAFA] w-[50%] justify-between items-center">
+                    <div className="flex gap-4 rounded-md bg-extra-light-gray w-[50%] justify-between items-center">
                         <aside className="font-secondary pl-8 py-6 ">
                             <h3 className="font-primary text-2xl">Luxe Abundance</h3>
                             <p className="mt-2 mb-5 text-rat-gray">Get 20% off with our code: LUXE20</p>                        
@@ -45,7 +49,11 @@ const Home = () => {
                                 <ArrowRightIcon className="w-4"/>
                             </Link>
                         </aside>
-                        <img className="w-64 h-52 object-cover" src="https://www.joyeriamurguia.com/737-home_default/dije-de-angel-en-oro-blanco.jpg" alt="banner" />
+                        <img 
+                            className="w-64 h-52 object-cover" 
+                            src="https://la.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-anillo-lv-volt-multi-de-oro-blanco--Q9O63D_PM2_Front%20view.png?wid=490&hei=490" 
+                            alt="banner" 
+                        />
                     </div>
                 </section>
                 <SliderSection/>
