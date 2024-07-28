@@ -6,6 +6,7 @@ import FeaturedSection from "./components/FeaturedSection";
 import BannerSection from "./components/BannerSection";
 import InstragramSection from "./components/InstragramSection";
 import PromotionSection from "./components/PromotionSection";
+import SliderSection from "../../components/SliderSection";
 
 const Home = () => {
     return (
@@ -47,6 +48,7 @@ const Home = () => {
                         <img className="w-64 h-52 object-cover" src="https://www.joyeriamurguia.com/737-home_default/dije-de-angel-en-oro-blanco.jpg" alt="banner" />
                     </div>
                 </section>
+                <SliderSection/>
                 <FeaturedSection/>
                 <PromotionSection/>
             </div>            

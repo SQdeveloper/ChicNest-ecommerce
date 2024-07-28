@@ -8,7 +8,7 @@ const FeaturedSection = () => {
                 <img 
                     src="../../src/assets/images/model_featured.jpg" 
                     alt="person banner" 
-                    className="rounded-md object-center overflow-hidden object-cover w-[50%] h-[90svh] "
+                    className="rounded-md object-center overflow-hidden object-cover w-[50%] aspect-[7/6] "
                 />
                 <div className="w-[50%] gap-4 grid grid-cols-2 grid-rows-2">
                     <CardFeaturedProduct/>
