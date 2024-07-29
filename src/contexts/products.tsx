@@ -2,15 +2,21 @@ import { createContext, useContext } from "react";
 import { Product } from "../types/product";
 import products from '../database/database.json'
 
-const ProductsContext = createContext<Product[]>([]);
+interface ProductsProviderProps {
+    products: Product[]
+}
+
+const ProductsContext = createContext<ProductsProviderProps>({
+    products: []
+});
 
 export const ProductsProvider = ({children}: {children: React.ReactNode})=>{
     
     return(
-        <ProductsContext.Provider value={products}>
+        <ProductsContext.Provider value={{products}}>
             {children}
         </ProductsContext.Provider>
     )
 }
 
-export const useProducts = ()=>{useContext(ProductsContext)}
+export const useProducts = ()=> useContext(ProductsContext);

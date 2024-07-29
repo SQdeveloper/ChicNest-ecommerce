@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "./icons";
-import products from '../../database/database.json'
+import { Product } from "../../types/product";
 
 interface Props {
-    itemsPerPage: number
+    itemsPerPage: number,
+    items: Product[];
 }
 
-const Slider: React.FC<Props> = ({itemsPerPage}) => {
+const Slider: React.FC<Props> = ({itemsPerPage, items}) => {
     const [number, setNumber] = useState(0)
     const [numPages, setNumPages] = useState(1);
-    const totalItems = products.length;
+    const totalItems = items.length;
 
     //Obtenemos el total de páginas
     useEffect(()=>{
@@ -45,7 +46,7 @@ const Slider: React.FC<Props> = ({itemsPerPage}) => {
             <div className="w-full overflow-hidden">
                 <div id="swiper" className="flex gap-0" style={{width: `calc(100% * ${numPages})`, transition:'transform .5s'}}>                
                     {
-                        products.map((product, index)=>(
+                        items.map((product, index)=>(
                             <div
                                 key={index} 
                                 className="aspect-square rounded-xl border-4 border-white bg-extra-light-gray" 
