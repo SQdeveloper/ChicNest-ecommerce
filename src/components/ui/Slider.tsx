@@ -51,7 +51,7 @@ const Slider: React.FC<Props> = ({itemsPerPage}) => {
                                 className="aspect-square rounded-xl border-4 border-white bg-extra-light-gray" 
                                 style={{width: `calc((100% / ${numPages})/ ${itemsPerPage})`}}
                             >
-                                <img src={product.images[0].src} alt="" />
+                                <img src={product.images[0].src} alt="product image" />
                             </div>                                                    
                         ))
                     }
