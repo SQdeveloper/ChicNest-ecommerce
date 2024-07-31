@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { ChevronLeftIcon, ChevronRightIcon } from "./icons";
-import { Product } from "../../types/product";
+import { ChevronLeftIcon, ChevronRightIcon } from "./ui/icons";
+import { Product } from "../types/product";
 import { Link } from "react-router-dom";
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
     items: Product[];
 }
 
-const Slider: React.FC<Props> = ({itemsPerPage, items}) => {
+const SliderSectionType2: React.FC<Props> = ({itemsPerPage, items}) => {
     const [number, setNumber] = useState(0)
     const [numPages, setNumPages] = useState(1);
     const totalItems = items.length;
@@ -43,7 +43,24 @@ const Slider: React.FC<Props> = ({itemsPerPage, items}) => {
     }, [number])
     
     return (
-        <section className="w-full relative px-3">
+        <section className="w-full mt-10 text-dark-gray">
+            <div className="flex justify-between gap-6">
+                <h2 className="text-3xl font-primary mb-5">Related Products</h2>
+                <div className="flex gap-4">
+                    <button
+                    onClick={HandleButtonLeft} 
+                    className="hover:bg-brown transition-all hover:text-white text-dark-gray flex justify-center items-center border border-brown bg-extra-light-gray rounded-full w-8 h-8"                
+                    >
+                        <ChevronLeftIcon className="w-5 h-5 "/>
+                    </button>
+                    <button
+                        onClick={HandleButtonRight} 
+                        className="hover:bg-brown transition-all hover:text-white text-dark-gray flex justify-center items-center border border-brown bg-extra-light-gray rounded-full w-8 h-8"
+                        >
+                        <ChevronRightIcon className="w-5 h-5 "/>                
+                    </button>
+                </div>
+            </div>
             <div className="w-full overflow-hidden">
                 <div id="swiper" className="flex gap-0" style={{width: `calc(100% * ${numPages})`, transition:'transform .5s'}}>                
                     {
@@ -58,21 +75,9 @@ const Slider: React.FC<Props> = ({itemsPerPage, items}) => {
                         ))
                     }
                 </div>
-            </div>
-            <button
-                onClick={HandleButtonLeft} 
-                className="hover:bg-brown transition-all hover:text-white text-dark-gray flex justify-center items-center border border-brown bg-extra-light-gray rounded-full w-9 h-9 absolute left-0 top-[50%] translate-y-[-50%]"                
-            >
-                <ChevronLeftIcon className="w-5 h-5 "/>
-            </button>
-            <button
-                onClick={HandleButtonRight} 
-                className="hover:bg-brown transition-all hover:text-white text-dark-gray flex justify-center items-center border border-brown bg-extra-light-gray rounded-full w-9 h-9 absolute right-0 top-[50%] translate-y-[-50%]"
-                >
-                <ChevronRightIcon className="w-5 h-5 "/>                
-            </button>
+            </div>            
         </section>
     );
 };
 
-export default Slider;
+export default SliderSectionType2;

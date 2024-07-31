@@ -5,7 +5,7 @@ const SliderSection = () => {
     const { products } = useProducts();    
 
     return (
-        <section className="mt-[70px]">
+        <section className="mt-[70px] text-dark-gray">
             <h2 className="mb-8 text-center font-primary text-3xl">Sparkle in Love</h2>
             <Slider itemsPerPage={5} items={products.slice(0, 10)}/>
         </section>

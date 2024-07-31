@@ -18,6 +18,9 @@ export default {
         'rat-gray': '#666563',
         'light-gray': '#a5a5a5',
         'extra-light-gray': '#f5f5f5'
+      },
+      backgroundImage: {
+        'header': 'url("./assets/images/collar.jpg")'
       }
     },
   },

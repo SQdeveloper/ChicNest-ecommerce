@@ -37,4 +37,13 @@
         transition: clip-path .4s;
         background-color: black;        
     }
+
+    .effect-image {
+        flex: 1;
+        transition: flex .3s;
+    }
+
+    .effect-image:hover {
+        flex: 2;
+    }    
 }
