@@ -20,7 +20,7 @@ export default {
         'extra-light-gray': '#f5f5f5'
       },
       backgroundImage: {
-        'header': 'url("./assets/images/collar.jpg")'
+        'header': 'url("./assets/images/bg-details.jpg")'
       }
     },
   },

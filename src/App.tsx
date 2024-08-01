@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Home from './pages/home/Home'
 import Footer from './components/Footer'
 import DetailsProduct from './pages/DetailsProduct/DetailsProduct'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {  
 
@@ -11,10 +12,11 @@ function App() {
     <>
       <Router>
         <Header/>
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<Home/>}></Route>
-          <Route path='/details' element={<DetailsProduct/>}></Route>
-        </Routes>
+          <Route path='/details/:id' element={<DetailsProduct/>}></Route>
+        </Routes>        
         <Footer/>
       </Router>
     </>

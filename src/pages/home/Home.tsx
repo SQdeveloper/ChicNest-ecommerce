@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRightIcon, AwardIcon, ShieldIcon, StackIcon, TruckIcon } from "../../components/ui/icons";
-import CardBenefits from "../../components/CardBenefits";
+import { ArrowRightIcon } from "../../components/ui/icons";
 import Hero from "./components/Hero";
 import FeaturedSection from "./components/FeaturedSection";
 import BannerSection from "./components/BannerSection";

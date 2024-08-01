@@ -1,488 +1,146 @@
-[   
-    {
-        "title": "Elegant Sparkle",
-        "price": 29999,
-        "description": "This exquisite piece of jewelry is a perfect blend of elegance and sophistication, designed to make a statement. Crafted with meticulous attention to detail, the ring features a stunning centerpiece that catches the light beautifully. The high-quality materials used ensure durability and longevity, making it a timeless addition to your collection. Whether you're dressing up for a special occasion or looking for a daily wear accessory, this ring is versatile enough to complement any outfit. Its design is both modern and classic, appealing to a wide range of tastes. Treat yourself or gift it to a loved one; this ring is sure to be cherished.",
-        "isOffer": true,
-        "priceOffer": 19999,
-        "categories": ["women", "kids", "gold"],
-        "stars": 4.5,
-        "product_number": 1234567890,
-        "stock": 10,
-        "brand": ["Boucheron"],
-        "images": [
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_41.png?v=1721229078"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-47.jpg?v=1721640492"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-27_8cf17a5d-a8fe-4140-a634-169d809f717d.jpg?v=1721640281"
-          }
-        ]
-      },
-      {
-        "title": "Classic Gem",
-        "price": 24999,
-        "description": "The Classic Gem ring embodies timeless elegance with its sleek and refined design. Featuring a brilliant gemstone, this piece is perfect for adding a touch of sophistication to any outfit. Its understated yet luxurious appearance makes it ideal for both everyday wear and special occasions. The ring is crafted from high-quality materials, ensuring it remains a treasured part of your jewelry collection for years to come. With its versatile design, it complements a wide range of styles, from casual to formal. Whether you're treating yourself or searching for the perfect gift, the Classic Gem ring is a choice you won't regret.",
-        "isOffer": false,
-        "priceOffer": 0,
-        "categories": ["women", "kids"],
-        "stars": 4.2,
-        "product_number": 9876543210,
-        "stock": 15,
-        "brand": ["Mikimoyo"],
-        "images": [
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_28.png?v=1721229073"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-89_c7a565e2-f6b9-442e-8c71-11b2086a479f.jpg?v=1721648300"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-87_123fd1ae-3ddf-4530-afc3-44f2f7742fe7.jpg?v=1721648300"
-          }
-        ]
-      },
-      {
-        "title": "Luminous Charm",
-        "price": 27999,
-        "description": "Luminous Charm is a stunning ring that captures the essence of refined beauty. With its radiant design, this ring is perfect for those who appreciate subtle yet captivating accessories. The delicate band is adorned with a sparkling centerpiece, which is sure to catch the eye. Made from premium materials, this ring is not only beautiful but also durable, ensuring it remains a favorite for years to come. Its versatile design makes it suitable for various occasions, whether it's a casual outing or a formal event. The Luminous Charm ring is an excellent choice for anyone looking to add a touch of elegance to their jewelry collection.",
-        "isOffer": true,
-        "priceOffer": 21999,
-        "categories": ["gold", "kids"],
-        "stars": 4.8,
-        "product_number": 1122334455,
-        "stock": 20,
-        "brand": ["Porrellano"],
-        "images": [
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_40.png?v=1721228159"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-15.jpg?v=1721411560"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-18_2e0da9f2-d3ad-48c3-901f-c230fe154d3a.jpg?v=1721411598"
-          }
-        ]
-      },
-      {
-        "title": "Radiant Bliss",
-        "price": 21999,
-        "description": "Radiant Bliss is a captivating piece that exudes grace and sophistication. The ring features a dazzling centerpiece, beautifully set to enhance its sparkle and shine. Perfect for any occasion, this ring is designed to complement a variety of outfits, making it a versatile addition to any jewelry collection. Crafted from high-quality materials, Radiant Bliss ensures durability and long-lasting beauty. Whether you're looking for a statement piece or a subtle accessory, this ring is an ideal choice. Its classic yet modern design appeals to a wide range of tastes, making it a perfect gift for someone special.",
-        "isOffer": false,
-        "priceOffer": 0,
-        "categories": ["women", "kids"],
-        "stars": 4.3,
-        "product_number": 5566778899,
-        "stock": 30,
-        "brand": ["Tiffany"],
-        "images": [
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_22.png?v=1721229079"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/JOYASDEACEROINOXIDABLEESPANA_141.jpg?v=1722115148"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-12_2ce05301-20e9-4381-941c-b97629eec6f2.jpg?v=1721664537"
-          }
-        ]
-      },
-      {
-        "title": "Eternal Shine",
-        "price": 26999,
-        "description": "Eternal Shine is a stunning ring that captures the essence of timeless beauty. The design is both elegant and modern, featuring a beautifully crafted band that showcases a dazzling gemstone. This ring is perfect for those who appreciate fine jewelry with a contemporary twist. Made from high-quality materials, it is durable and designed to last, making it a great addition to any collection. Whether worn for a special occasion or as an everyday accessory, Eternal Shine adds a touch of elegance to any ensemble. It's a perfect gift for anyone who loves jewelry that combines classic and modern elements.",
-        "isOffer": true,
-        "priceOffer": 22999,
-        "categories": ["women", "kids"],
-        "stars": 4.6,
-        "product_number": 2233445566,
-        "stock": 25,
-        "brand": ["Bucellars"],
-        "images": [
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_34.png?v=1721229010"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/45.jpg?v=1722088500"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/40.jpg?v=1722088500"
-          }
-        ]
-      },
-    {
-        "title": "Magnolia Ring",
-        "price": 16990,
-        "description": "The Magnolia Ring is a stunning piece of jewelry, perfect for any occasion. Crafted with high-quality materials, this ring offers both durability and elegance. The design features a delicate floral motif, inspired by the beauty of magnolias. The ring's centerpiece is a sparkling gemstone that catches the light beautifully. It's an excellent choice for those who appreciate fine jewelry and want to add a touch of sophistication to their collection. The Magnolia Ring is also a wonderful gift option for loved ones, as it symbolizes beauty and grace. Whether worn daily or for special events, this ring is sure to make a lasting impression.",
-        "isOffer": false,
-        "priceOffer": 14990,
-        "categories": ["women", "kids", "bracelet"],
-        "stars": 4.5,
-        "product_number": 1234567890,
-        "stock": 10,
-        "brand": ["Tiffany"],
-        "images": [
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_41.png?v=1721229078"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-47.jpg?v=1721640492"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-27_8cf17a5d-a8fe-4140-a634-169d809f717d.jpg?v=1721640281"
-          }
-        ]
-      },
-      {
-        "title": "Espoir Ring",
-        "price": 12990,
-        "description": "The Espoir Ring is an exquisite piece that embodies hope and elegance. Designed with a sleek and modern aesthetic, this ring features a minimalist band adorned with a finely cut gemstone. The gemstone is set in a way that maximizes its brilliance and adds a touch of sparkle to any outfit. The ring is made from high-quality materials, ensuring it will last for years to come. Perfect for everyday wear or special occasions, the Espoir Ring is a versatile accessory that complements any style. It also makes a thoughtful gift for someone special, symbolizing hope and positive energy.",
-        "isOffer": true,
-        "priceOffer": 10990,
-        "categories": ["women", "kids", "bracelet"],
-        "stars": 4.7,
-        "product_number": 2345678901,
-        "stock": 5,
-        "brand": ["Boucheron"],
-        "images": [
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_28.png?v=1721229073"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-89_c7a565e2-f6b9-442e-8c71-11b2086a479f.jpg?v=1721648300"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-87_123fd1ae-3ddf-4530-afc3-44f2f7742fe7.jpg?v=1721648300"
-          }
-        ]
-      },
-      {
-        "title": "Baikal Band",
-        "price": 14990,
-        "description": "The Baikal Band is a striking and unique ring that captures the beauty of nature. Inspired by the serene waters of Lake Baikal, this ring features a bold and modern design. The band is crafted from durable materials, making it perfect for everyday wear. The centerpiece of the ring is a beautifully cut gemstone, which adds a touch of sparkle and elegance. The Baikal Band is ideal for those who appreciate contemporary jewelry with a natural twist. It's also a great gift for someone who loves the outdoors and wants to carry a piece of nature with them wherever they go.",
-        "isOffer": true,
-        "priceOffer": 13990,
-        "categories": ["women", "kids", "rings"],
-        "stars": 4.3,
-        "product_number": 3456789012,
-        "stock": 7,
-        "brand": ["Mikimoyo"],
-        "images": [
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_40.png?v=1721228159"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-15.jpg?v=1721411560"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-18_2e0da9f2-d3ad-48c3-901f-c230fe154d3a.jpg?v=1721411598"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-47_a941e6f0-090b-479f-8251-118b732dc36a.jpg?v=1721640355"
-          }
-        ]
-      },
-      {
-        "title": "Olivia Ring",
-        "price": 15990,
-        "description": "The Olivia Ring is a timeless piece that exudes elegance and sophistication. This ring features a classic design, with a delicate band that supports a stunning gemstone. The gemstone is expertly cut to enhance its brilliance, making it a focal point of the piece. The Olivia Ring is perfect for those who love traditional jewelry with a modern twist. It's made from high-quality materials, ensuring it will withstand the test of time. Whether worn as an everyday accessory or for special occasions, the Olivia Ring adds a touch of luxury to any outfit. It also makes a wonderful gift for loved ones.",
-        "isOffer": false,
-        "priceOffer": 13990,
-        "categories": ["women", "kids", "gold"],
-        "stars": 4.8,
-        "product_number": 4567890123,
-        "stock": 8,
-        "brand": ["Porrellano"],
-        "images": [
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_22.png?v=1721229079"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/JOYASDEACEROINOXIDABLEESPANA_141.jpg?v=1722115148"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-12_2ce05301-20e9-4381-941c-b97629eec6f2.jpg?v=1721664537"
-          }
-        ]
-      },
-      {
-        "title": "Delicate Zircon Ring",
-        "price": 13990,
-        "description": "The Delicate Zircon Ring is an exquisite piece of jewelry, perfect for those who appreciate fine craftsmanship. This ring features a delicate band adorned with a sparkling zircon gemstone. The stone is set in a way that maximizes its brilliance, catching the light beautifully. The ring's design is elegant and timeless, making it suitable for any occasion. Whether worn daily or for special events, the Delicate Zircon Ring adds a touch of sophistication to any outfit. It also makes a thoughtful gift for someone special, as it symbolizes beauty and elegance. The ring is crafted from high-quality materials, ensuring durability and longevity.",
-        "isOffer": true,
-        "priceOffer": 12990,
-        "categories": ["women", "kids"],
-        "stars": 4.6,
-        "product_number": 5678901234,
-        "stock": 6,
-        "brand": ["Bucellars"],
-        "images": [
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_34.png?v=1721229010"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/45.jpg?v=1722088500"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/40.jpg?v=1722088500"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/41.jpg?v=1722088501"
-          }
-        ]
-      },
-    {
-        "title": "Golden Band",
-        "price": 150.00,
-        "description": "This Golden Band is a timeless piece of jewelry that exudes elegance and sophistication. Made from high-quality materials, this ring is designed to last and provide a lasting shine. Its classic design makes it versatile enough to be worn on any occasion, whether formal or casual. The Golden Band is available in various sizes, ensuring a perfect fit for anyone. Its comfortable fit and lightweight design make it ideal for all-day wear. This ring is a great addition to any jewelry collection and makes a wonderful gift for loved ones. Add a touch of elegance to your look with the Golden Band, a piece that will never go out of style.",
-        "isOffer": false,
-        "priceOffer": 120.00,
-        "categories": ["rings", "kids"],
-        "stars": 4.5,
-        "product_number": 1234567890,
-        "stock": 20,
-        "brand": ["Boucheron", "Mikimoyo"],
-        "images": [
-          { "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_35.png?v=1721228930" },
-          { "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-110.jpg?v=1721402859" },
-          { "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-3.jpg?v=1721402870" }
-        ]
-      },
-      {
-        "title": "Adjustable Glamour",
-        "price": 130.00,
-        "description": "The Adjustable Glamour Ring is perfect for those who love versatile jewelry. Its adjustable design allows it to fit comfortably on any finger, making it a must-have accessory. Crafted from high-quality materials, this ring features a sleek and modern design that complements any outfit. Whether you're dressing up for a special occasion or adding a touch of elegance to your everyday look, the Adjustable Glamour Ring is the perfect choice. It comes in a variety of finishes, including gold and silver, to match your personal style. This ring is not only stylish but also durable, making it a great addition to any jewelry collection. It's also an excellent gift choice for someone special.",
-        "isOffer": true,
-        "priceOffer": 110.00,
-        "categories": ["rings", "kids"],
-        "stars": 4.8,
-        "product_number": 2345678901,
-        "stock": 30,
-        "brand": ["Porrellano", "Tiffany"],
-        "images": [
-          { "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_42.png?v=1721229080" },
-          { "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-47.jpg?v=1721640492" },
-          { "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-48.jpg?v=1721640208" },
-          { "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-27_8cf17a5d-a8fe-4140-a634-169d809f717d.jpg?v=1721640281" }
-        ]
-      },
-      {
-        "title": "Cuban Style",
-        "price": 120.00,
-        "description": "The Cuban Style Ring is a bold and fashionable piece that stands out with its unique design. Featuring interlocking links, this ring offers a distinct texture and style that is sure to attract attention. Made with high-quality materials, it is both durable and stylish, suitable for everyday wear or special occasions. The Cuban Style Ring is available in multiple sizes and finishes, allowing you to find the perfect match for your taste. Its versatile design makes it a great addition to any jewelry collection, whether worn alone or paired with other accessories. This ring also makes an excellent gift, symbolizing strength and unity. Enhance your style with the Cuban Style Ring, a timeless accessory that will never go out of fashion.",
-        "isOffer": false,
-        "priceOffer": 100.00,
-        "categories": ["women", "kids", "bracelet"],
-        "stars": 4.2,
-        "product_number": 3456789012,
-        "stock": 50,
-        "brand": ["Bucellars", "Boucheron"],
-        "images": [
-          { "src": "//www.pialu.pe/cdn/shop/files/anilloswaterproof_38.png?v=1721228276" }
-        ]
-      },
-      {
-        "title": "Silver Parisian",
-        "price": 140.00,
-        "description": "Inspired by the elegance of Paris, the Silver Parisian Ring is a stunning accessory that adds a touch of sophistication to any outfit. Crafted from high-quality silver, this ring features a sleek and modern design that is perfect for any occasion. Its lightweight and comfortable fit make it ideal for everyday wear. The Silver Parisian Ring is versatile enough to be paired with other jewelry pieces or worn alone for a minimalist look. Available in various sizes, it ensures a perfect fit for everyone. This exquisite ring is a must-have for any jewelry collection and is sure to become a favorite accessory. Whether you're looking for a gift for a loved one or a special treat for yourself, the Silver Parisian Ring is an excellent choice.",
-        "isOffer": true,
-        "priceOffer": 125.00,
-        "categories": ["women", "kids", "gold plated"],
-        "stars": 4.7,
-        "product_number": 4567890123,
-        "stock": 60,
-        "brand": ["Tiffany", "Mikimoyo"],
-        "images": [
-          { "src": "//www.pialu.pe/cdn/shop/files/anillo-paris-color-plata-152155.jpg?v=1719229365" }
-        ]
-      },
-      {
-        "title": "Classic Pascasia",
-        "price": 160.00,
-        "description": "The Classic Pascasia Ring is an elegant and timeless piece that showcases exceptional craftsmanship. Made from high-quality materials, this ring features intricate detailing and a beautiful finish. Its unique design makes it a standout accessory that can be worn on any occasion, whether formal or casual. The Classic Pascasia Ring is available in various sizes, ensuring a perfect fit for everyone. Its comfortable fit and lightweight design make it ideal for all-day wear. This ring is a great addition to any jewelry collection and makes a thoughtful gift for loved ones. Add a touch of elegance to your style with the Classic Pascasia Ring, a piece that embodies sophistication and grace.",
-        "isOffer": false,
-        "priceOffer": 140.00,
-        "categories": ["rings", "kids", "women"],
-        "stars": 4.9,
-        "product_number": 5678901234,
-        "stock": 80,
-        "brand": ["Porrellano", "Bucellars"],
-        "images": [
-          { "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_13.png?v=1721229078" },
-          { "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-412.jpg?v=1721232583" },
-          { "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-410_b264df9e-ae03-42d4-9453-079319c8e5fc.jpg?v=1721232583" }
-        ]
-      },
-    {
-        "title": "Nature Ring",
-        "price": 329.99,
-        "description": "The Nature Ring captures the essence of the great outdoors with its delicate leaf-inspired design. Crafted with high-quality materials, this ring is perfect for nature lovers and those who appreciate unique, artistic jewelry. The ring's subtle green gemstone adds a touch of color, making it a standout piece. Ideal for both casual and formal occasions, this ring is a must-have for any jewelry collection. Whether you're wearing it as a statement piece or as part of a set, the Nature Ring is sure to impress.",
-        "isOffer": true,
-        "priceOffer": 249.99,
-        "categories": ["women", "kids", "bracelet"],
-        "stars": 4.6,
-        "product_number": 1928374650,
-        "stock": 10,
-        "brand": ["Porrellano"],
-        "images": [
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_49.png?v=1721229079"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-42.jpg?v=1721663672"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-6_2a449344-0e8e-48f7-b955-73909692c427.jpg?v=1721663702"
-          }
-        ]
-      },
-      {
-        "title": "Golden Glow",
-        "price": 289.99,
-        "description": "The Golden Glow ring is a stunning piece of jewelry that adds a touch of luxury to any outfit. Made with high-quality gold plating, this ring shines beautifully in any light. Its minimalist design makes it versatile, suitable for both everyday wear and special occasions. The Golden Glow ring is perfect for those who appreciate elegant, understated jewelry that still makes a statement. With its comfortable fit and timeless appeal, this ring is a wonderful addition to any jewelry collection.",
-        "isOffer": false,
-        "priceOffer": 0,
-        "categories": ["women", "kids", "rings"],
-        "stars": 4.3,
-        "product_number": 8765432109,
-        "stock": 15,
-        "brand": ["Bucellars"],
-        "images": [
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_54.png?v=1721229081"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-44.jpg?v=1721415447"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-43.jpg?v=1721415575"
-          }
-        ]
-      },
-      {
-        "title": "Daisy Elegance",
-        "price": 259.99,
-        "description": "Daisy Elegance is a beautiful ring inspired by the delicate and charming daisy flower. Its elegant design features a daisy motif set with sparkling crystals, making it perfect for those who love floral-themed jewelry. This ring is ideal for spring and summer outfits, adding a touch of freshness and joy to your look. Crafted with precision and care, Daisy Elegance is a piece that combines beauty with durability. It’s a wonderful gift for yourself or someone special who appreciates the finer things in life.",
-        "isOffer": true,
-        "priceOffer": 199.99,
-        "categories": ["women", "kids", "rings"],
-        "stars": 4.7,
-        "product_number": 2468101214,
-        "stock": 7,
-        "brand": ["Mikimoyo"],
-        "images": [
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_52.png?v=1721229080"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-156_81ccd680-8727-40d2-8151-1cb36be97fa2.jpg?v=1721662599"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-25.jpg?v=1721411940"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-24.jpg?v=1721411940"
-          }
-        ]
-      },
-      {
-        "title": "Victory Ring",
-        "price": 349.99,
-        "description": "Victory Ring is a bold and striking piece designed for those who like to make a statement. This ring features a unique design with geometric patterns and a mix of shiny and matte finishes. It's perfect for special occasions where you want to stand out and showcase your individuality. Crafted from high-quality materials, Victory Ring is durable and comfortable to wear. Whether you're attending a formal event or looking for a standout piece to complete your outfit, this ring is an excellent choice.",
-        "isOffer": false,
-        "priceOffer": 0,
-        "categories": ["bracelet", "gold", "rings"],
-        "stars": 4.9,
-        "product_number": 1029384756,
-        "stock": 12,
-        "brand": ["Boucheron"],
-        "images": [
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_48.png?v=1721229080"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-30_2e0935ce-1d1e-41d8-a5cb-ce5c28ce5819.jpg?v=1721664057"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-83.jpg?v=1721424699"
-          },
-          {            
-            "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-86.jpg?v=1721424698"
-          }
-        ]
-      },
-    {
-      "title": "Elegant Ring",
-      "price": 299.99,
-      "description": "This elegant ring features a timeless design, perfect for any occasion. Made with high-quality materials, it offers a comfortable fit and a stunning appearance. Whether you're dressing up for a special event or just want to add a touch of elegance to your everyday look, this ring is a perfect choice. The intricate detailing and shiny finish make it a standout piece in any jewelry collection. Don't miss the chance to own this beautiful accessory, ideal for both casual and formal settings.",
+[
+  {
+      "id": 1,
+      "title": "Elegant Sparkle",
+      "price": 29999,
+      "description": "This exquisite piece of jewelry is a perfect blend of elegance and sophistication, designed to make a statement. Crafted with meticulous attention to detail, the ring features a stunning centerpiece that catches the light beautifully. The high-quality materials used ensure durability and longevity, making it a timeless addition to your collection. Whether you're dressing up for a special occasion or looking for a daily wear accessory, this ring is versatile enough to complement any outfit. Its design is both modern and classic, appealing to a wide range of tastes. Treat yourself or gift it to a loved one; this ring is sure to be cherished.",
       "isOffer": true,
-      "priceOffer": 199.99,
-      "categories": ["women", "rings", "gold"],
+      "priceOffer": 19999,
+      "categories": ["women", "kids", "gold"],
       "stars": 4.5,
       "product_number": 1234567890,
-      "stock": 50,
-      "brand": ["Tiffany"],
-      "images": [
-        {          
-          "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_43.png?v=1721229076"
-        },
-        {          
-          "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-96_aba4229d-2e6c-4f7a-b8e2-72eb06df20ae.jpg?v=1721640124"
-        },
-        {          
-          "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-94_7cb81cae-b8e1-4826-8c32-172f5855dc91.jpg?v=1721640139"
-        }
-      ]
-    },
-    {
-      "title": "Classic Band",
-      "price": 199.99,
-      "description": "This classic band is a versatile piece that complements any style. Crafted with precision, it features a sleek and modern design that can be worn alone or stacked with other rings. The band is made from durable materials, ensuring it can withstand daily wear while maintaining its shine. Its minimalist yet elegant appearance makes it suitable for both men and women. Ideal for special occasions or everyday wear, this band is a timeless addition to any jewelry collection.",
-      "isOffer": false,
-      "priceOffer": 0,
-      "categories": ["bracelet", "rings", "gold"],
-      "stars": 4.0,
-      "product_number": 9876543210,
-      "stock": 30,
+      "stock": 10,
       "brand": ["Boucheron"],
       "images": [
-        {          
-          "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_47.png?v=1721229080"
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_41.png?v=1721229078"
         },
-        {          
-          "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-4_85f3998f-0980-46f8-baa3-48010ca63510.jpg?v=1721674121"
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-47.jpg?v=1721640492"
         },
-        {          
-          "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels_737931a5-172a-435b-a295-691670a45970.jpg?v=1721674122"
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-27_8cf17a5d-a8fe-4140-a634-169d809f717d.jpg?v=1721640281"
         }
       ]
-    },
-    {
-      "title": "Diamond Shine",
-      "price": 499.99,
-      "description": "The Diamond Shine ring exudes luxury and sophistication. Adorned with sparkling diamonds, this exquisite piece is perfect for special occasions. The diamonds are set in a beautifully crafted band that highlights their brilliance. Whether it's an engagement, anniversary, or just a gift to yourself, this ring is sure to impress. The design is both modern and timeless, making it a versatile addition to any jewelry collection. Wear it with confidence and let the world see your shine.",
-      "isOffer": true,
-      "priceOffer": 399.99,
-      "categories": ["women", "earrings", "rings", "gold"],
-      "stars": 4.8,
-      "product_number": 1357913579,
-      "stock": 20,
+  },
+  {
+      "id": 2,
+      "title": "Classic Gem",
+      "price": 24999,
+      "description": "The Classic Gem ring embodies timeless elegance with its sleek and refined design. Featuring a brilliant gemstone, this piece is perfect for adding a touch of sophistication to any outfit. Its understated yet luxurious appearance makes it ideal for both everyday wear and special occasions. The ring is crafted from high-quality materials, ensuring it remains a treasured part of your jewelry collection for years to come. With its versatile design, it complements a wide range of styles, from casual to formal. Whether you're treating yourself or searching for the perfect gift, the Classic Gem ring is a choice you won't regret.",
+      "isOffer": false,
+      "priceOffer": 0,
+      "categories": ["women", "kids"],
+      "stars": 4.2,
+      "product_number": 9876543210,
+      "stock": 15,
       "brand": ["Mikimoyo"],
       "images": [
-        {          
-          "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_32.png?v=1721229074"
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_28.png?v=1721229073"
         },
-        {          
-          "src": "//www.pialu.pe/cdn/shop/files/7_de12ff7f-e2b3-4fd6-9657-6cd92d8335a6.jpg?v=1721414876"
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-89_c7a565e2-f6b9-442e-8c71-11b2086a479f.jpg?v=1721648300"
         },
-        {          
-          "src": "//www.pialu.pe/cdn/shop/files/5_fbeb39cb-e075-4c44-b8db-8b9c3d1547fc.jpg?v=1721414876"
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-87_123fd1ae-3ddf-4530-afc3-44f2f7742fe7.jpg?v=1721648300"
         }
       ]
-    }
-  ]
-  
+  },
+  {
+      "id": 3,
+      "title": "Luminous Charm",
+      "price": 27999,
+      "description": "Luminous Charm is a stunning ring that captures the essence of refined beauty. With its radiant design, this ring is perfect for those who appreciate subtle yet captivating accessories. The delicate band is adorned with a sparkling centerpiece, which is sure to catch the eye. Made from premium materials, this ring is not only beautiful but also durable, ensuring it remains a favorite for years to come. Its versatile design makes it suitable for various occasions, whether it's a casual outing or a formal event. The Luminous Charm ring is an excellent choice for anyone looking to add a touch of elegance to their jewelry collection.",
+      "isOffer": true,
+      "priceOffer": 21999,
+      "categories": ["gold", "kids"],
+      "stars": 4.8,
+      "product_number": 1122334455,
+      "stock": 20,
+      "brand": ["Porrellano"],
+      "images": [
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_40.png?v=1721228159"
+        },
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-15.jpg?v=1721411560"
+        },
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-18_2e0da9f2-d3ad-48c3-901f-c230fe154d3a.jpg?v=1721411598"
+        }
+      ]
+  },
+  {
+      "id": 4,
+      "title": "Radiant Bliss",
+      "price": 21999,
+      "description": "Radiant Bliss is a captivating piece that exudes grace and sophistication. The ring features a dazzling centerpiece, beautifully set to enhance its sparkle and shine. Perfect for any occasion, this ring is designed to complement a variety of outfits, making it a versatile addition to any jewelry collection. Crafted from high-quality materials, Radiant Bliss ensures durability and long-lasting beauty. Whether you're looking for a statement piece or a subtle accessory, this ring is an ideal choice. Its classic yet modern design appeals to a wide range of tastes, making it a perfect gift for someone special.",
+      "isOffer": false,
+      "priceOffer": 0,
+      "categories": ["women", "kids"],
+      "stars": 4.3,
+      "product_number": 5566778899,
+      "stock": 30,
+      "brand": ["Tiffany"],
+      "images": [
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_22.png?v=1721229079"
+        },
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/JOYASDEACEROINOXIDABLEESPANA_141.jpg?v=1722115148"
+        },
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-12_2ce05301-20e9-4381-941c-b97629eec6f2.jpg?v=1721664537"
+        }
+      ]
+  },
+  {
+      "id": 5,
+      "title": "Eternal Shine",
+      "price": 26999,
+      "description": "Eternal Shine is a stunning ring that captures the essence of timeless beauty. The design is both elegant and modern, featuring a beautifully crafted band that showcases a dazzling gemstone. This ring is perfect for those who appreciate fine jewelry with a contemporary twist. Made from high-quality materials, it is durable and designed to last, making it a great addition to any collection. Whether worn for a special occasion or as an everyday accessory, Eternal Shine adds a touch of elegance to any ensemble. It's a perfect gift for anyone who loves jewelry that combines classic and modern elements.",
+      "isOffer": true,
+      "priceOffer": 22999,
+      "categories": ["women", "kids"],
+      "stars": 4.6,
+      "product_number": 2233445566,
+      "stock": 25,
+      "brand": ["Bucellars"],
+      "images": [
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_34.png?v=1721229010"
+        },
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/45.jpg?v=1722088500"
+        },
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/40.jpg?v=1722088500"
+        }
+      ]
+  },
+  {
+      "id": 6,
+      "title": "Magnolia Ring",
+      "price": 16990,
+      "description": "The Magnolia Ring is a stunning piece of jewelry, perfect for any occasion. Crafted with high-quality materials, this ring offers both durability and elegance. The design features a delicate floral motif, inspired by the beauty of magnolias. The ring's centerpiece is a sparkling gemstone that catches the light beautifully. It's an excellent choice for those who appreciate fine jewelry and want to add a touch of sophistication to their collection. The Magnolia Ring is also a wonderful gift option for loved ones, as it symbolizes beauty and grace. Whether worn daily or for special events, this ring is sure to make a lasting impression.",
+      "isOffer": false,
+      "priceOffer": 14990,
+      "categories": ["women", "kids", "bracelet"],
+      "stars": 4.5,
+      "product_number": 1234567890,
+      "stock": 10,
+      "brand": ["Tiffany"],
+      "images": [
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_41.png?v=1721229078"
+        },
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-47.jpg?v=1721640492"
+        },
+        {            
+          "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-27_8cf17a5d-a8fe-4140-a634-169d809f717d.jpg?v=1721640281"
+        }
+      ]
+  }
+]

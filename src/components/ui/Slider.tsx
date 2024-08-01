@@ -48,7 +48,7 @@ const Slider: React.FC<Props> = ({itemsPerPage, items}) => {
                 <div id="swiper" className="flex gap-0" style={{width: `calc(100% * ${numPages})`, transition:'transform .5s'}}>                
                     {
                         items.map((product, index)=>(
-                            <Link to={'/details'}
+                            <Link to={`/details/${product.id}`}
                                 key={index} 
                                 className="aspect-square rounded-xl border-4 border-white bg-extra-light-gray" 
                                 style={{width: `calc((100% / ${numPages})/ ${itemsPerPage})`}}

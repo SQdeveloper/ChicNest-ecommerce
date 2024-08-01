@@ -3,6 +3,7 @@ export type Categories = "women" | "kids" | "gold plated" | "gold" | "bracelet" 
 export type Brand = "Boucheron" | "Mikimoyo" | "Porrellano" | "Tiffany" | "Bucellars";
 
 export interface Product {
+    id: number,
     title: string,
     price: number,
     description: string,
