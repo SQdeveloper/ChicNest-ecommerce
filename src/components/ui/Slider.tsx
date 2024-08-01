@@ -14,11 +14,11 @@ const Slider: React.FC<Props> = ({itemsPerPage, items}) => {
     const totalItems = items.length;
 
     //Obtenemos el total de páginas
-    useEffect(()=>{
+    useEffect(()=>{        
         const result = totalItems / itemsPerPage;
 
         setNumPages(Math.ceil(result))
-    },[])
+    },[items])
 
     const moveSlider = ()=>{
         const swiper = document.getElementById('swiper');        

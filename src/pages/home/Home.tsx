@@ -7,8 +7,11 @@ import InstragramSection from "./components/InstragramSection";
 import PromotionSection from "./components/PromotionSection";
 import SliderSection from "../../components/SliderSection";
 import BenefitsSection from "../../components/BenefitsSection";
+import { useProducts } from "../../contexts/products";
 
 const Home = () => {
+    const { products } = useProducts();        
+
     return (
         <>
             <Hero/>
@@ -47,8 +50,8 @@ const Home = () => {
                             alt="banner" 
                         />
                     </div>
-                </section>
-                <SliderSection/>
+                </section>                
+                <SliderSection itemsPerPage={5} products={products.slice(0,10)}/>                             
                 <FeaturedSection/>
                 <PromotionSection/>
             </div>            

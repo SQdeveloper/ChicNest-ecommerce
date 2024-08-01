@@ -118,29 +118,5 @@
           "src": "//www.pialu.pe/cdn/shop/files/40.jpg?v=1722088500"
         }
       ]
-  },
-  {
-      "id": 6,
-      "title": "Magnolia Ring",
-      "price": 16990,
-      "description": "The Magnolia Ring is a stunning piece of jewelry, perfect for any occasion. Crafted with high-quality materials, this ring offers both durability and elegance. The design features a delicate floral motif, inspired by the beauty of magnolias. The ring's centerpiece is a sparkling gemstone that catches the light beautifully. It's an excellent choice for those who appreciate fine jewelry and want to add a touch of sophistication to their collection. The Magnolia Ring is also a wonderful gift option for loved ones, as it symbolizes beauty and grace. Whether worn daily or for special events, this ring is sure to make a lasting impression.",
-      "isOffer": false,
-      "priceOffer": 14990,
-      "categories": ["women", "kids", "bracelet"],
-      "stars": 4.5,
-      "product_number": 1234567890,
-      "stock": 10,
-      "brand": ["Tiffany"],
-      "images": [
-        {            
-          "src": "//www.pialu.pe/cdn/shop/files/anillos_waterproof_41.png?v=1721229078"
-        },
-        {            
-          "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-47.jpg?v=1721640492"
-        },
-        {            
-          "src": "//www.pialu.pe/cdn/shop/files/Waterproofjewels-27_8cf17a5d-a8fe-4140-a634-169d809f717d.jpg?v=1721640281"
-        }
-      ]
   }
 ]
