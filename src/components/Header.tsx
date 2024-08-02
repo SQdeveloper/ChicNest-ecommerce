@@ -7,22 +7,22 @@ const Header = () => {
             <nav>
                 <ul className="flex items-center gap-4 text-md">
                     <li>
-                        <Link className="ancle-style" to={''}>Home</Link>
+                        <Link className="ancle-style" to={'/'}>Home</Link>
                     </li>
                     <li>
-                        <Link className="ancle-style" to={''}>Shop</Link>
+                        <Link className="ancle-style" to={'/shop'}>Shop</Link>
                     </li>
                     <li>
-                        <Link className="ancle-style" to={''}>About Us</Link>
+                        <Link className="ancle-style" to={'/about-us'}>About Us</Link>
                     </li>
                     <li>
                         <Link className="ancle-style" to={''}>Pages</Link>
                     </li>
                 </ul>
             </nav>
-            <div>
+            <Link to={'/'}>
                 <h1 className="font-bold text-3xl font-primary">ChicNest</h1>
-            </div>
+            </Link>
             <div className="flex items-center gap-7">
                 <div className="flex w-64 border border-light-gray rounded-full py-1.5 px-3.5 text-sm">
                     <input 

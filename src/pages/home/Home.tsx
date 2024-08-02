@@ -31,7 +31,7 @@ const Home = () => {
                         </aside>
                         <img 
                             className="w-64 h-52 object-cover" 
-                            src="https://la.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-anillo-lv-volt-multi-de-oro-blanco--Q9O63D_PM2_Front%20view.png?wid=490&hei=490" 
+                            src="../../src/assets/images/collar1.webp" 
                             alt="banner" 
                         />
                     </div>
@@ -46,7 +46,7 @@ const Home = () => {
                         </aside>
                         <img 
                             className="w-64 h-52 object-cover" 
-                            src="https://la.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-anillo-lv-volt-multi-de-oro-blanco--Q9O63D_PM2_Front%20view.png?wid=490&hei=490" 
+                            src="../../src/assets/images/collar2.webp" 
                             alt="banner" 
                         />
                     </div>
