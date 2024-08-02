@@ -6,6 +6,7 @@ import { ChevronListIcon } from "../../components/ui/icons";
 import { useProducts } from "../../contexts/products";
 import { useEffect, useState } from "react";
 import { Product } from "../../types/product";
+import HeaderBreadcrumb from "../../components/HeaderBreadcrumb";
 
 const DetailsProduct = () => {
     const { products } = useProducts();
@@ -20,9 +21,7 @@ const DetailsProduct = () => {
 
     return (
         <div>
-            <section className="flex justify-center items-center text-center w-full h-60 bg-cover bg-center bg-no-repeat bg-header">
-                <h2 className="text-white text-3xl font-primary">Home / Shop / Product details</h2>
-            </section>
+            <HeaderBreadcrumb direction="Shop / Product details"/>
             <div className="mx-10">
                 <div className="mt-12 w-full flex gap-8 items-center">
                     <div className="w-[50%] h-[600px] grid grid-cols-3 gap-2 grid-rows-4">

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { CartFillIcon, PersonFillIcon, SearchIcon } from "./ui/icons";
+import { CartFillIcon, PersonFillIcon } from "./ui/icons";
+import InputSearch from "./ui/InputSearch";
 
 const Header = () => {
     return (
@@ -24,14 +25,7 @@ const Header = () => {
                 <h1 className="font-bold text-3xl font-primary">ChicNest</h1>
             </Link>
             <div className="flex items-center gap-7">
-                <div className="flex w-64 border border-light-gray rounded-full py-1.5 px-3.5 text-sm">
-                    <input 
-                        type="text"
-                        placeholder="Search..."
-                        className="w-full border-none outline-none bg-transparent"
-                    />
-                    <SearchIcon/>
-                </div>
+                <InputSearch placeholder="Search..."/>
                 <div className="flex items-center gap-4">
                     <Link className="flex items-center relative justify-center rounded-full bg-brown w-8 aspect-square h-8" to={''}>
                         <CartFillIcon className="text-light-brown"/>

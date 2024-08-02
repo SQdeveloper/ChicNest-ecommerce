@@ -5,9 +5,9 @@ import Home from './pages/home/Home'
 import Footer from './components/Footer'
 import DetailsProduct from './pages/DetailsProduct/DetailsProduct'
 import ScrollToTop from './components/ScrollToTop'
+import Shop from './pages/Shop/Shop'
 
 function App() {  
-
   return (
     <>
       <Router>
@@ -16,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}></Route>
           <Route path='/details/:id' element={<DetailsProduct/>}></Route>
+          <Route path='/shop' element={<Shop/>}></Route>
         </Routes>        
         <Footer/>
       </Router>

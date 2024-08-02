@@ -3,7 +3,7 @@ import { ArrowRightIcon } from "../../components/ui/icons";
 import Hero from "./components/Hero";
 import FeaturedSection from "./components/FeaturedSection";
 import BannerSection from "./components/BannerSection";
-import InstragramSection from "./components/InstragramSection";
+import InstragramSection from "../../components/InstragramSection";
 import PromotionSection from "./components/PromotionSection";
 import SliderSection from "../../components/SliderSection";
 import BenefitsSection from "../../components/BenefitsSection";

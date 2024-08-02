@@ -3,10 +3,33 @@ import { ArrowRightIcon, ChevronLeftIcon, ChevronRightIcon } from "./icons";
 import { Product } from "../../types/product";
 import { Link } from "react-router-dom";
 import { calculateDiscount } from "../../utils/CalculateDiscount";
+import { FormatPrice } from "../../utils/FormatPrice";
 
 interface Props {
     itemsPerPage: number,
     items: Product[];
+}
+
+export const ButtonRight = ({HandleButtonRight, className}: {HandleButtonRight: ()=>void, className?: string})=>{
+    return(        
+        <button
+            onClick={HandleButtonRight} 
+            className={`${className} hover:bg-brown transition-all hover:text-white text-dark-gray flex justify-center items-center border border-brown bg-extra-light-gray rounded-full w-9 h-9`}
+            >
+            <ChevronRightIcon className="w-5 h-5 "/>                
+        </button>
+    )
+}
+
+export const ButtonLeft = ({HandleButtonLeft, className}: {HandleButtonLeft: ()=>void, className?: string})=>{
+    return(
+        <button
+            onClick={HandleButtonLeft} 
+            className={`${className} hover:bg-brown transition-all hover:text-white text-dark-gray flex justify-center items-center border border-brown bg-extra-light-gray rounded-full w-9 h-9`}                
+        >
+            <ChevronLeftIcon className="w-5 h-5 "/>
+        </button>
+    )
 }
 
 const Slider: React.FC<Props> = ({itemsPerPage, items}) => {
@@ -62,15 +85,15 @@ const Slider: React.FC<Props> = ({itemsPerPage, items}) => {
                                 }
                                 <img 
                                     src={product.images[0].src} alt="product" 
-                                    className="w-[70%] h-auto object-cover"
+                                    className="w-[75%] h-auto object-cover"
                                 />
                                 <div className="justify-between bg-white px-2 py-3 w-full mb-1 rounded-sm flex gap-2 items-start">
                                     <div className="text-sm font-bold">
                                         <h4 className="text-rat-gray mb-2">{product.title}</h4>
                                         <div className="flex gap-2 items-center">
-                                            <span>$ {product.price}</span>                                
+                                            <span>$ {FormatPrice(product.price)}</span>                                
                                             {
-                                                product.isOffer && <span className="text-xs mb-[2px] text-light-gray">$ {product.priceOffer} USD</span>
+                                                product.isOffer && <span className="text-xs mb-[2px] text-light-gray">$ {FormatPrice(product.priceOffer)} USD</span>
                                             }                                    
                                         </div>
                                     </div>
@@ -81,18 +104,8 @@ const Slider: React.FC<Props> = ({itemsPerPage, items}) => {
                     }
                 </div>  
             </div>
-            <button
-                onClick={HandleButtonLeft} 
-                className="hover:bg-brown transition-all hover:text-white text-dark-gray flex justify-center items-center border border-brown bg-extra-light-gray rounded-full w-9 h-9 absolute left-0 top-[50%] translate-y-[-50%]"                
-            >
-                <ChevronLeftIcon className="w-5 h-5 "/>
-            </button>
-            <button
-                onClick={HandleButtonRight} 
-                className="hover:bg-brown transition-all hover:text-white text-dark-gray flex justify-center items-center border border-brown bg-extra-light-gray rounded-full w-9 h-9 absolute right-0 top-[50%] translate-y-[-50%]"
-                >
-                <ChevronRightIcon className="w-5 h-5 "/>                
-            </button>
+            <ButtonLeft className="absolute left-0 top-[50%] translate-y-[-50%]" HandleButtonLeft={HandleButtonLeft}/>
+            <ButtonRight className="absolute right-0 top-[50%] translate-y-[-50%]" HandleButtonRight={HandleButtonRight}/>
         </section>
     );
 };

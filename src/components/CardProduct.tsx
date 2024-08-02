@@ -1,15 +1,11 @@
 import { Link } from "react-router-dom";
-import { ArrowRightIcon } from "../../../components/ui/icons";
-import { Product } from "../../../types/product";
-import { calculateDiscount } from "../../../utils/CalculateDiscount";
-import { FormatPrice } from "../../../utils/FormatPrice";
+import { Product } from "../types/product";
+import { calculateDiscount } from "../utils/CalculateDiscount";
+import { ArrowRightIcon, CartFillIcon, StarIcon } from "./ui/icons";
+import { FormatPrice } from "../utils/FormatPrice";
 
-interface Props {
-    product: Product
-}
-
-const CardFeaturedProduct: React.FC<Props> = ({product}) => {
-    const { isOffer, priceOffer, price, title, images } = product;
+const CardProduct = ({product}: {product: Product}) => {
+    const { isOffer, price, priceOffer, title, images } = product;
 
     return (
         <Link to={`/details/${product.id}`} className="font-secondary relative flex flex-col items-center px-1 justify-between bg-extra-light-gray rounded-md overflow-hidden">
@@ -33,10 +29,18 @@ const CardFeaturedProduct: React.FC<Props> = ({product}) => {
                         }                                    
                     </div>
                 </div>
-                <ArrowRightIcon className="rounded-full p-1 border border-brown w-6 text-brown"/>
+                <div className="flex flex-col gap-1 items-end font-secondary">
+                    <div className="text-sm text-dark-gray font-bold flex gap-1">
+                        <span>4.5</span>
+                        <StarIcon className="h-4 text-yellow-500"/>
+                    </div>
+                    <button className="group hover:bg-brown transition-all flex justify-center w-fit items-center border border-brown rounded-full">
+                        <CartFillIcon className="text-brown transition-all group-hover:text-white w-6 h-6 p-1.5"/>
+                    </button>
+                </div>                
             </div>
-        </Link>                    
+        </Link>   
     );
 };
 
-export default CardFeaturedProduct;
+export default CardProduct;
