@@ -86,8 +86,8 @@ const Shop = () => {
             <HeaderBreadcrumb direction="Shop" />
             <div className="mt-12 mx-10">
                 <BenefitsSection/>
-                <div className="grid grid-cols-5 mt-10 gap-8">
-                    <div className="font-secondary">
+                <div className="flex mt-10 gap-10 w-full max-w-[1300px]">
+                    <div className="w-[250px] font-secondary">
                         <aside>
                             <h2 className="camelcase mb-2 font-primary text-xl">Product by category</h2>
                             <form className="w-full">                                
@@ -110,7 +110,7 @@ const Shop = () => {
                             </form>
                         </aside>
                         <aside className="mt-6 w-full">
-                            <h2 className="camelcase mb-2 font-primary text-xl">Price</h2>                            
+                            <h2 className="camelcase mb-3 font-primary text-xl">Price</h2>                            
                             <RangeSlider values={values} setValues={setValues}/>
                             <button 
                                 className="font-secondary bg-brown text-white px-1 py-2 w-full rounded-md hover:opacity-[80%] mt-3"
@@ -120,7 +120,7 @@ const Shop = () => {
                             </button>
                         </aside>
                     </div>
-                    <div className="flex flex-col gap-8 col-span-4">
+                    <div className="flex flex-col gap-8 flex-1">
                         <div className="flex justify-between w-full">
                             <InputSearch onChange={handleSearch} className="w-[325px]" placeholder="Search for products..."/>
                             <div className="flex gap-4">

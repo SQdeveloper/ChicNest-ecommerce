@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Product } from "../types/product";
 import { calculateDiscount } from "../utils/CalculateDiscount";
-import { ArrowRightIcon, CartFillIcon, StarIcon } from "./ui/icons";
+import { CartFillIcon, StarIcon } from "./ui/icons";
 import { FormatPrice } from "../utils/FormatPrice";
 
 const CardProduct = ({product}: {product: Product}) => {
