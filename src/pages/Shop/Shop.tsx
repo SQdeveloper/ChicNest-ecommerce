@@ -9,6 +9,7 @@ import { ButtonLeft, ButtonRight } from "../../components/ui/Slider";
 import { Product } from "../../types/product";
 import useFilters from "./hooks/useFilters";
 import useDebounce from "../../hooks/useDebounce";
+import RangeSlider from "../../components/ui/rangeSlider";
 
 const Shop = () => {
     const [productsToShow, setProductsToShow] = useState<Product[]>();
@@ -17,8 +18,10 @@ const Shop = () => {
     const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
     const [selectedTitle, setSelectedTitle] = useState('');
     const debounceText = useDebounce(selectedTitle, 400);    
-    const { filteredProducts } = useFilters(selectedCategories, selectedBrands, debounceText);
     const [numPages, setNumPages] = useState<number>(0);
+    const [values, setValues] = useState<number[]>([0, 30000]);
+    const [priceValues, setPriceValues] = useState<number[]>([0, 30000]);
+    const { filteredProducts } = useFilters(selectedCategories, selectedBrands, debounceText, priceValues);
 
     useEffect(()=>{        
         //10 by 10 separation by pagination
@@ -72,6 +75,12 @@ const Shop = () => {
         }
     }
 
+    const handleApplyPriceFilter = ()=>{        
+        //Validation so that the priceValues state is not updated
+        if(priceValues[0] === values[0] && priceValues[1] === values[1]) return;        
+        setPriceValues(values);
+    }
+
     return (
         <div>
             <HeaderBreadcrumb direction="Shop" />
@@ -99,6 +108,16 @@ const Shop = () => {
                                 <Checkbox onChange={handleChangeBrands} name="Tiffany" text="Tiffany" htmlFor="Tiffany"/>                                                            
                                 <Checkbox onChange={handleChangeBrands} name="Bucellars" text="Bucellars" htmlFor="Bucellars"/>                                                            
                             </form>
+                        </aside>
+                        <aside className="mt-6 w-full">
+                            <h2 className="camelcase mb-2 font-primary text-xl">Price</h2>                            
+                            <RangeSlider values={values} setValues={setValues}/>
+                            <button 
+                                className="font-secondary bg-brown text-white px-1 py-2 w-full rounded-md hover:opacity-[80%] mt-3"
+                                onClick={handleApplyPriceFilter}
+                            >
+                                    Apply filter
+                            </button>
                         </aside>
                     </div>
                     <div className="flex flex-col gap-8 col-span-4">
