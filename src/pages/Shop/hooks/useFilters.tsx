@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Product } from "../../../types/product";
 import { useProducts } from "../../../contexts/products";
 
-const useFilters = (selectedCategories: string[], selectedBrands: string[]) =>  {
+const useFilters = (selectedCategories: string[], selectedBrands: string[], selectedTitle: string) =>  {
     const { products } = useProducts();
     const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 
@@ -22,14 +22,18 @@ const useFilters = (selectedCategories: string[], selectedBrands: string[]) =>  
                 product.brand.some(category => selectedBrands.includes(category))
             )
         }
+
+        //Filter by name         
+        if(selectedTitle === '') return;        
+        list = list.filter(product => product.title.toLowerCase().includes(selectedTitle.toLowerCase()))
         
         setFilteredProducts(list);
     }
     
-    useEffect(()=>{
-        if(selectedBrands.length === 0 && selectedCategories.length === 0) return setFilteredProducts(products);
+    useEffect(()=>{        
+        if(selectedBrands.length === 0 && selectedCategories.length === 0 && selectedTitle === '') return setFilteredProducts(products);
         filterProducts();
-    }, [selectedCategories, selectedBrands]);
+    }, [selectedCategories, selectedBrands, selectedTitle]);
 
     return { filteredProducts };
 };

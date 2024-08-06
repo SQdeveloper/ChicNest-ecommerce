@@ -8,13 +8,16 @@ import InputSearch from "../../components/ui/InputSearch";
 import { ButtonLeft, ButtonRight } from "../../components/ui/Slider";
 import { Product } from "../../types/product";
 import useFilters from "./hooks/useFilters";
+import useDebounce from "../../hooks/useDebounce";
 
 const Shop = () => {
     const [productsToShow, setProductsToShow] = useState<Product[]>();
     const [page, setPage] = useState(1);
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
     const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
-    const { filteredProducts } = useFilters(selectedCategories, selectedBrands);
+    const [selectedTitle, setSelectedTitle] = useState('');
+    const debounceText = useDebounce(selectedTitle, 400);    
+    const { filteredProducts } = useFilters(selectedCategories, selectedBrands, debounceText);
     const [numPages, setNumPages] = useState<number>(0);
 
     useEffect(()=>{        
@@ -93,7 +96,7 @@ const Shop = () => {
                     </div>
                     <div className="flex flex-col gap-8 col-span-4">
                         <div className="flex justify-between w-full">
-                            <InputSearch className="w-[325px]" placeholder="Search for products..."/>
+                            <InputSearch setValue={setSelectedTitle} className="w-[325px]" placeholder="Search for products..."/>
                             <div className="flex gap-4">
                                 <ButtonLeft 
                                     disabled={page === 1 && true}
