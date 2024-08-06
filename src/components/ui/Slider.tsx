@@ -10,22 +10,24 @@ interface Props {
     items: Product[];
 }
 
-export const ButtonRight = ({HandleButtonRight, className}: {HandleButtonRight: ()=>void, className?: string})=>{
+export const ButtonRight = ({HandleButtonRight, className, disabled}: {disabled?:boolean, HandleButtonRight: ()=>void, className?: string})=>{
     return(        
         <button
             onClick={HandleButtonRight} 
             className={`${className} hover:bg-brown transition-all hover:text-white text-dark-gray flex justify-center items-center border border-brown bg-extra-light-gray rounded-full w-9 h-9`}
+            disabled={disabled}
             >
             <ChevronRightIcon className="w-5 h-5 "/>                
         </button>
     )
 }
 
-export const ButtonLeft = ({HandleButtonLeft, className}: {HandleButtonLeft: ()=>void, className?: string})=>{
+export const ButtonLeft = ({HandleButtonLeft, className, disabled}: {disabled?:boolean, HandleButtonLeft: ()=>void, className?: string})=>{
     return(
         <button
             onClick={HandleButtonLeft} 
             className={`${className} hover:bg-brown transition-all hover:text-white text-dark-gray flex justify-center items-center border border-brown bg-extra-light-gray rounded-full w-9 h-9`}                
+            disabled={disabled}
         >
             <ChevronLeftIcon className="w-5 h-5 "/>
         </button>

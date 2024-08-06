@@ -15,12 +15,17 @@ const Shop = () => {
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
     const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
     const { filteredProducts } = useFilters(selectedCategories, selectedBrands);
+    const [numPages, setNumPages] = useState<number>(0);
 
     useEffect(()=>{        
+        //10 by 10 separation by pagination
         if(!filteredProducts) return;
-        const list = filteredProducts.slice((page - 1)*10, 10*(page));
-        
+        const list = filteredProducts.slice((page - 1)*10, 10*(page));        
         setProductsToShow(list);
+
+        //We calculate the number pages.
+        const result = Math.ceil(filteredProducts.length / 10);
+        setNumPages(result)
     }, [page, filteredProducts])        
 
     const handleChangeCategories = (event: ChangeEvent<HTMLInputElement>) => {
@@ -34,6 +39,14 @@ const Shop = () => {
                 return list;
             })
         }
+    }
+
+    const handleClickArrowLeft = ()=> {        
+        setPage(prev => prev - 1);
+    }
+
+    const handleClickArrowRight = ()=> {
+        setPage(prev => prev + 1);
     }
 
     const handleChangeBrands = (event: ChangeEvent<HTMLInputElement>) => {
@@ -82,11 +95,19 @@ const Shop = () => {
                         <div className="flex justify-between w-full">
                             <InputSearch className="w-[325px]" placeholder="Search for products..."/>
                             <div className="flex gap-4">
-                                <ButtonLeft HandleButtonLeft={()=>{}}/>
-                                <ButtonRight HandleButtonRight={()=>{}}/>
+                                <ButtonLeft 
+                                    disabled={page === 1 && true}
+                                    className={`${page === 1 && 'cursor-not-allowed opacity-[30%] hover:bg-transparent hover:text-brown'}`} 
+                                    HandleButtonLeft={handleClickArrowLeft}
+                                    />
+                                <ButtonRight
+                                    disabled={page === numPages && true}
+                                    className={`${page === numPages && 'cursor-not-allowed opacity-[30%] hover:bg-transparent hover:text-brown'}`} 
+                                    HandleButtonRight={handleClickArrowRight}
+                                />
                             </div>
                         </div>
-                        <div className="grid grid-cols-3 gap-3">
+                        <div className="grid-products gap-3">
                             {
                                 productsToShow?.map(product => (
                                     <CardProduct key={product.id} product={product}/>
