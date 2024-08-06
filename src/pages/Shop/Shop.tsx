@@ -52,6 +52,13 @@ const Shop = () => {
         setPage(prev => prev + 1);
     }
 
+    const handleSearch = (e: ChangeEvent<HTMLInputElement>)=>{
+        const text = e.target.value;
+        if(text === ' ') return e.target.value = '';
+        console.log(text)
+        setSelectedTitle(text);
+    }
+
     const handleChangeBrands = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, checked} = event.target;
 
@@ -96,7 +103,7 @@ const Shop = () => {
                     </div>
                     <div className="flex flex-col gap-8 col-span-4">
                         <div className="flex justify-between w-full">
-                            <InputSearch setValue={setSelectedTitle} className="w-[325px]" placeholder="Search for products..."/>
+                            <InputSearch onChange={handleSearch} className="w-[325px]" placeholder="Search for products..."/>
                             <div className="flex gap-4">
                                 <ButtonLeft 
                                     disabled={page === 1 && true}
