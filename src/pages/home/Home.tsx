@@ -56,7 +56,9 @@ const Home = () => {
                 <PromotionSection/>
             </div>            
             <BannerSection/>
-            <InstragramSection/>            
+            <div className="mt-16 mx-10">
+                <InstragramSection/>
+            </div>     
         </>        
     );
 };

@@ -7,6 +7,7 @@ import { useProducts } from "../../contexts/products";
 import { useEffect, useState } from "react";
 import { Product } from "../../types/product";
 import HeaderBreadcrumb from "../../components/HeaderBreadcrumb";
+import ClientsSection from "../../components/ClientsSection";
 
 const DetailsProduct = () => {
     const { products } = useProducts();
@@ -109,38 +110,9 @@ const DetailsProduct = () => {
                     <h2 className="font-primary text-3xl">Product materials</h2>
                     <p className="mt-2">In jewelry making, a variety of materials are used to create stunning pieces. Precious metals like gold, silver, and platinum are foundational. Gold, valued for its rarity and luster, can be alloyed into yellow, white, and rose gold. Silver, often used in its sterling form (92.5% silver), is known for its bright appearance. Platinum is prized for its durability and resistance to tarnish.</p>
                 </section>
-                <section className="font-secondary text-center bg-extra-light-gray mt-10 rounded-md text-dark-gray p-10">
-                    <h2 className="w-[450px] leading-[50px] text-center mx-auto text-4xl font-primary">Hear from Those Whose Lives We've Touched</h2>
-                    <div className="mt-7 flex gap-2 h-[500px]">
-                        <div className="h-full effect-image w-full flex flex-col">
-                            <img 
-                                className="h-full rounded-md overflow-hidden w-full object-cover object-center" 
-                                src="../../src/assets/images/testimonio1.jpg"
-                                alt="testimony" 
-                            />
-                            <h3 className="mt-4 mb-1 font-bold">Sana Anwar</h3>
-                            <span>Branch Manager</span>
-                        </div>
-                        <div className="h-full effect-image w-full flex flex-col">
-                            <img 
-                                className="h-full rounded-md overflow-hidden w-full object-cover object-center" 
-                                src="../../src/assets/images/testimonio3.jpg"
-                                alt="testimony" 
-                            />
-                            <h3 className="mt-4 mb-1 font-bold">Sandy K</h3>
-                            <span>Railway employee</span>
-                        </div>
-                        <div className="h-full effect-image w-full flex flex-col">
-                            <img 
-                                className="h-full rounded-md overflow-hidden w-full object-cover object-center" 
-                                src="../../src/assets/images/testimonio2.jpg"
-                                alt="testimony" 
-                            />
-                            <h3 className="mt-4 mb-1 font-bold">Ranjeet Sehgal</h3>
-                            <span>School Teacher</span>
-                        </div>
-                    </div>
-                </section>
+                <div className="mt-10">
+                    <ClientsSection/>
+                </div>
                 <SliderSectionType2 items={items} itemsPerPage={5}/>
             </div>
         </div>

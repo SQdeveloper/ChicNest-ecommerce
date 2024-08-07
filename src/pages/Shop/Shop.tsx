@@ -10,6 +10,7 @@ import { Product } from "../../types/product";
 import useFilters from "./hooks/useFilters";
 import useDebounce from "../../hooks/useDebounce";
 import RangeSlider from "../../components/ui/rangeSlider";
+import { SearchIcon } from "../../components/ui/icons";
 
 const Shop = () => {
     const [productsToShow, setProductsToShow] = useState<Product[]>();
@@ -57,8 +58,7 @@ const Shop = () => {
 
     const handleSearch = (e: ChangeEvent<HTMLInputElement>)=>{
         const text = e.target.value;
-        if(text === ' ') return e.target.value = '';
-        console.log(text)
+        if(text === ' ') return e.target.value = '';        
         setSelectedTitle(text);
     }
 
@@ -136,17 +136,32 @@ const Shop = () => {
                                 />
                             </div>
                         </div>
-                        <div className="grid-products gap-3">
                             {
-                                productsToShow?.map(product => (
-                                    <CardProduct key={product.id} product={product}/>
-                                ))
+                                filteredProducts && filteredProducts.length > 0 ?
+                                    <div className="grid-products gap-3">   
+                                        {
+                                            productsToShow?.map(product => (
+                                                <CardProduct key={product.id} product={product}/>
+                                            ))
+                                        }
+                                    </div>  
+                                    :
+                                    <div className="flex-col gap-6 bg-extra-light-gray h-64 rounded-md p-8 flex justify-center items-center">
+                                        <SearchIcon className="w-10 h-10"/>
+                                        <div className="flex flex-col gap-2 text-center">
+                                            <span className="font-secondary text-2xl">
+                                                No products were found with filters applied
+                                            </span>
+                                            <span className="font-secondary text-rat-gray">Try with other filters</span>
+                                        </div>
+                                    </div>
                             }
-                        </div>
                     </div>
                 </div>
             </div>
-            <InstragramSection/>
+            <div className="mt-16 mx-10">
+                    <InstragramSection/>
+            </div>
         </div>
     );
 };
