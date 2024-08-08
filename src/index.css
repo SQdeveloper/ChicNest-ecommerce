@@ -4,7 +4,6 @@
 /* Prata */
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -54,5 +53,5 @@
     .grid-products {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
-    }
+    }    
 }

@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import daisyui from "daisyui"
+ 
 export default {
   content: [
     "./index.html",
@@ -17,12 +19,14 @@ export default {
         'semi-gray': '#413d37',
         'rat-gray': '#666563',
         'light-gray': '#a5a5a5',
-        'extra-light-gray': '#f5f5f5'
+        'extra-light-gray': '#EDEDED'
       },
       backgroundImage: {
         'header': 'url("./assets/images/bg-details.jpg")'
       }
     },
   },
-  plugins: [],
+  plugins: [
+    daisyui,
+  ],
 }
