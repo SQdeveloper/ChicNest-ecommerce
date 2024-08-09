@@ -16,3 +16,7 @@ export interface Product {
     brand: string[],
     images: {src: string}[];    
 }
+
+export interface ProductCart extends Product {
+    amountInCart: number
+}

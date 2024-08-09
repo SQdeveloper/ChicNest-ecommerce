@@ -31,28 +31,44 @@ const AboutUs = () => {
                     <h2 className="mt-3 font-primary text-4xl">Where Expertise</h2>
                     <div className="grid grid-cols-4 gap-8 mt-10">
                         <div className="flex flex-col gap-4 ">
-                            <img className="aspect-square object-center rounded-xl w-full object-cover" src="../../src/assets/images/model2.jpg" alt="person" />
+                            <img 
+                                className="object-top aspect-square rounded-xl w-full object-cover" 
+                                src="../../src/assets/workers/Ernie_RPA_2021.jpg" 
+                                alt="person" 
+                            />
                             <aside>
                                 <h3 className="font-primary font-bold text-xl text-dark-gray">Annette Black</h3>
                                 <span className="font-medium text-rat-gray font-secondary">Design Expert</span>
                             </aside>
                         </div>
                         <div className="flex flex-col gap-4 ">
-                            <img className="aspect-square object-center rounded-xl w-full object-cover" src="../../src/assets/images/model2.jpg" alt="person" />
+                            <img 
+                                className="object-top aspect-square rounded-xl w-full object-cover" 
+                                src="../../src/assets/workers/Merly_RPA_2021.jpg" 
+                                alt="person" 
+                            />
                             <aside>
                                 <h3 className="font-primary font-bold text-xl text-dark-gray">Annette Black</h3>
                                 <span className="font-medium text-rat-gray font-secondary">Design Expert</span>
                             </aside>
                         </div>
                         <div className="flex flex-col gap-4 ">
-                            <img className="aspect-square object-center rounded-xl w-full object-cover" src="../../src/assets/images/model2.jpg" alt="person" />
+                            <img 
+                                className="object-top aspect-square rounded-xl w-full object-cover" 
+                                src="../../src/assets/workers/Nueva_foto_de_Andrea.jpg" 
+                                alt="person" 
+                            />
                             <aside>
                                 <h3 className="font-primary font-bold text-xl text-dark-gray">Annette Black</h3>
                                 <span className="font-medium text-rat-gray font-secondary">Design Expert</span>
                             </aside>
                         </div>
                         <div className="flex flex-col gap-4 ">
-                            <img className="aspect-square object-center rounded-xl w-full object-cover" src="../../src/assets/images/model2.jpg" alt="person" />
+                            <img 
+                                className="object-top aspect-square rounded-xl w-full object-cover" 
+                                src="../../src/assets/workers/Silvana_RPA_2021.jpg" 
+                                alt="person" 
+                            />
                             <aside>
                                 <h3 className="font-primary font-bold text-xl text-dark-gray">Annette Black</h3>
                                 <span className="font-medium text-rat-gray font-secondary">Design Expert</span>

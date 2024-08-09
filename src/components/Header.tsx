@@ -27,7 +27,10 @@ const Header = () => {
             <div className="flex items-center gap-7">
                 <InputSearch placeholder="Search..."/>
                 <div className="flex items-center gap-4">
-                    <Link className="flex items-center relative justify-center rounded-full bg-brown w-8 aspect-square h-8" to={''}>
+                    <Link 
+                        className="flex items-center relative justify-center rounded-full bg-brown w-8 aspect-square h-8" 
+                        to={'/cart'}
+                    >
                         <CartFillIcon className="text-light-brown"/>
                         <div className="absolute top-[-4px] right-[-4px] bg-red-500 rounded-full w-4 h-4 flex justify-center items-center text-[10px] text-white font-secondary">1</div>
                     </Link>

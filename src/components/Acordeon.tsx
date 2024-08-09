@@ -1,34 +1,19 @@
 import InputQuestion from "../pages/AboutUs/components/InputQuestion";
+import questions from '../database/questions.json';
 
 const Acordeon = () => {
     return (
         <div className="mt-10 flex flex-col gap-6 w-[720px] mx-auto">
-            <InputQuestion 
-                id="question1"
-                name="questions"
-                question="title"
-                defaultChecked
-            />                        
-            <InputQuestion 
-                id="question2"
-                name="questions"
-                question="title"                
-            />                                        
-            <InputQuestion 
-                id="question3"
-                name="questions"
-                question="title"                
-            />                                        
-            <InputQuestion 
-                id="question4"
-                name="questions"
-                question="title"                
-            />                                        
-            <InputQuestion 
-                id="question5"
-                name="questions"
-                question="title"                
-            />                                        
+            {
+                questions.map((question, index) => (
+                    <InputQuestion 
+                        id={`question${index}`}
+                        name="questions"
+                        question={question.question}                
+                        response={question.answer}
+                    />                                        
+                ))
+            }            
         </div>
     );
 };

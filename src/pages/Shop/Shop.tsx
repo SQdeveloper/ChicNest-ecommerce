@@ -83,7 +83,7 @@ const Shop = () => {
 
     return (
         <div>
-            <HeaderBreadcrumb direction="Shop" />
+            <HeaderBreadcrumb direction="Shop" />            
             <div className="mt-12 mx-10">
                 <BenefitsSection/>
                 <div className="flex mt-10 gap-10 w-full max-w-[1300px]">

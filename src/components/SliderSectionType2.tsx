@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { ChevronLeftIcon, ChevronRightIcon } from "./ui/icons";
+import { ArrowRightIcon, ChevronLeftIcon, ChevronRightIcon } from "./ui/icons";
 import { Product } from "../types/product";
 import { Link } from "react-router-dom";
+import { FormatPrice } from "../utils/FormatPrice";
+import { calculateDiscount } from "../utils/CalculateDiscount";
 
 interface Props {
     itemsPerPage: number,
@@ -67,11 +69,32 @@ const SliderSectionType2: React.FC<Props> = ({itemsPerPage, items}) => {
                         items.map((product, index)=>(
                             <Link to={`/details/${product.id}`}
                                 key={index} 
-                                className="aspect-square rounded-xl border-4 border-white bg-extra-light-gray" 
+                                className="rounded-xl border-4 border-white bg-extra-light-gray font-secondary relative flex flex-col items-center px-1 justify-between overflow-hidden" 
                                 style={{width: `calc((100% / ${numPages})/ ${itemsPerPage})`}}
                             >
-                                <img src={product.images[0].src} alt="product image" />
-                            </Link>                                                    
+                                {
+                                    product.isOffer &&
+                                    <div className="rounded-full px-4 text-sm font-secondary py-1 absolute top-3 left-3 bg-brown text-white">
+                                        - {calculateDiscount(product.price, product.priceOffer)} %
+                                    </div>
+                                }
+                                <img 
+                                    src={product.images[0].src} alt="product" 
+                                    className="w-[75%] h-auto object-cover"
+                                />
+                                <div className="justify-between bg-white px-2 py-3 w-full mb-1 rounded-sm flex gap-2 items-start">
+                                    <div className="text-sm font-bold">
+                                        <h4 className="text-rat-gray mb-2">{product.title}</h4>
+                                        <div className="flex gap-2 items-center">
+                                            <span>$ {FormatPrice(product.price)}</span>                                
+                                            {
+                                                product.isOffer && <span className="text-xs mb-[2px] text-light-gray">$ {FormatPrice(product.priceOffer)} USD</span>
+                                            }                                    
+                                        </div>
+                                    </div>
+                                    <ArrowRightIcon className="rounded-full p-1 border border-brown w-6 text-brown"/>
+                                </div>
+                            </Link>                                               
                         ))
                     }
                 </div>
