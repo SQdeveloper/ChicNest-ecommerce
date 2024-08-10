@@ -1,35 +1,18 @@
 import { Link } from "react-router-dom";
-import { Product, ProductCart } from "../types/product";
+import { Product } from "../types/product";
 import { calculateDiscount } from "../utils/CalculateDiscount";
 import { CartFillIcon, StarIcon } from "./ui/icons";
 import { FormatPrice } from "../utils/FormatPrice";
-import { toast, Toaster } from "sonner";
+import { Toaster } from "sonner";
+import { saveToCart } from "../utils/SaveProductToCart";
+import { useProducts } from "../contexts/products";
 
 const CardProduct = ({product}: {product: Product}) => {
-    const { isOffer, price, priceOffer, title, images } = product;
+    const { isOffer, price, priceOffer, title, images } = product;    
+    const { productsCart, setProductsCart } = useProducts();
 
-    const saveToCart = ()=>{
-        const local = localStorage.getItem('__products__cart__');
-        let list = local ? JSON.parse(local) : [];
-        const indexFind = list.findIndex((pr: ProductCart) => pr.id === product.id)
-
-        if(indexFind >= 0) {
-            list = list.map((_product: ProductCart) => {
-                if(_product.id === product.id) {
-                    return {..._product, amountInCart: _product.amountInCart + 1}
-                }
-                return _product;                
-            })
-        }else {
-            list = [{...product, amountInCart: 1}, ...list]
-        }
-        
-        localStorage.setItem('__products__cart__', JSON.stringify(list));
-
-        //Active toaster
-        toast.message('Product has been saved', {
-            description: `${product.title}`,
-        })
+    const handleAddToCart = ()=>{
+        saveToCart(product, productsCart, setProductsCart);
     }
 
     return (
@@ -64,7 +47,7 @@ const CardProduct = ({product}: {product: Product}) => {
                     </div>
                     <button  
                         className="group hover:bg-brown transition-all flex justify-center w-fit items-center border border-brown rounded-full"
-                        onClick={saveToCart}
+                        onClick={handleAddToCart}
                     >
                         <CartFillIcon className="text-brown transition-all group-hover:text-white w-6 h-6 p-1.5"/>
                     </button>

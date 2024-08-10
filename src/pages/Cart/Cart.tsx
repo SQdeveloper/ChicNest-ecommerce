@@ -1,18 +1,11 @@
 import { Link } from "react-router-dom";
 import { ShieldIcon } from "../../components/ui/icons";
 import ProductOfCart from "./components/ProductOfCart";
-import { useEffect, useState } from "react";
 import { ProductCart } from "../../types/product";
+import { useProducts } from "../../contexts/products";
 
-const Cart = () => {
-    const [productsCart, setProductsCart] = useState<ProductCart[]>([]);
-
-    useEffect(()=>{
-        const local = localStorage.getItem('__products__cart__');
-        const products = local ? JSON.parse(local) : [];
-
-        setProductsCart(products);
-    },[])
+const Cart = () => {    
+    const { productsCart } = useProducts();
 
     return (
         <div className="flex">
@@ -29,10 +22,10 @@ const Cart = () => {
                 <div className="flex flex-col gap-4 mt-6">
                     {
                         productsCart && productsCart.length > 0 ?
-                            productsCart.map(product => (
+                            productsCart.map((product: ProductCart) => (
                                 <ProductOfCart 
                                     key={product.id}
-                                    product={product}
+                                    product={product}                                    
                                 />
                             ))
                             :

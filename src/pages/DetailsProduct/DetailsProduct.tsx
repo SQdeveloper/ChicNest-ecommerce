@@ -1,27 +1,35 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import BenefitsSection from "../../components/BenefitsSection";
 import SliderSectionType2 from "../../components/SliderSectionType2";
-import ButtonStyle from "../../components/ui/ButtonStyle";
-import { ChevronListIcon } from "../../components/ui/icons";
+import { ArrowLeftDown, ChevronListIcon } from "../../components/ui/icons";
 import { useProducts } from "../../contexts/products";
 import { useEffect, useState } from "react";
 import { Product } from "../../types/product";
 import HeaderBreadcrumb from "../../components/HeaderBreadcrumb";
 import ClientsSection from "../../components/ClientsSection";
+import { saveToCart } from "../../utils/SaveProductToCart";
+import { Toaster } from "sonner";
 
 const DetailsProduct = () => {
-    const { products } = useProducts();
+    const { products, productsCart, setProductsCart } = useProducts();
     const items = products.slice(0,10);    
     const { id } = useParams();
     const [product, setProduct] = useState<Product>();    
+    const togo = useNavigate();
 
     useEffect(()=>{
         const result = products.find(_product => _product.id === Number(id));
         setProduct(result);
     }, [id]);
 
+    const handleShopNow = ()=>{
+        if(product) saveToCart(product, productsCart, setProductsCart);
+        togo('/cart')
+    }
+
     return (
         <div>
+            <Toaster/>
             <HeaderBreadcrumb direction="Shop / Product details"/>
             <div className="mx-10">
                 <div className="mt-12 w-full flex gap-8 items-center">
@@ -52,7 +60,19 @@ const DetailsProduct = () => {
                     <aside className="font-secondary w-[50%] flex flex-col justify-center">
                         <h2 className="text-4xl font-primary text-dark-gray">{product?.title}</h2>
                         <p className="text-rat-gray mt-4 mb-5">{product?.description}</p>
-                        <ButtonStyle/>
+                        <button  
+                            onClick={handleShopNow}
+                            className="group relative shadow block font-secondary text-sm w-fit text-white"
+                        >
+                            <div className="group-hover:-translate-x-[2px] group-hover:-translate-y-[2px] transition-all bg-brown z-20 flex gap-1 text-nowrap px-6 py-2 text-transparent rounded-[3px] justify-center items-center">
+                                <span>Shop Now</span>
+                                <ArrowLeftDown/>
+                            </div>
+                            <div className="group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all absolute z-30 gap-1 top-[4px] left-[5px] w-full border border-light-brown rounded-[3px] bg-brown h-full flex justify-center items-center">
+                                <span>Shop Now</span>                
+                                <ArrowLeftDown className="w-3.5"/>
+                            </div>            
+                        </button>
                         <div className="flex flex-col gap-3 mt-8">                            
                             <div className="flex gap-1 text-dark-gray">
                                 <strong>Price:</strong>
