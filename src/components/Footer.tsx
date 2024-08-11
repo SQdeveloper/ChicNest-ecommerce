@@ -42,7 +42,7 @@ const Footer = () => {
                         <Link className="ancle-style" to={'/Q&A'}>FAQ</Link>                        
                     </li>
                     <li className="w-fit">
-                        <Link className="ancle-style" to={''}>Reviews</Link>                        
+                        <Link className="ancle-style" to={'/refund-policy'}>Refund policy</Link>                        
                     </li>                
                     <li className="w-fit">
                         <Link className="ancle-style" to={'/terms-of-service'}>Terms of service</Link>                        

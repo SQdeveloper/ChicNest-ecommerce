@@ -11,6 +11,7 @@ import Cart from './pages/Cart/Cart'
 import Questions from './pages/Questions'
 import ContactUs from './pages/ContactUs'
 import TermsOfServices from './pages/TermsOfServices'
+import RefundPolicy from './pages/RefundPolicy'
 
 function App() {  
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path='/Q&A' element={<Questions/>}></Route>
           <Route path='/contact-us' element={<ContactUs/>}></Route>
           <Route path='/terms-of-service' element={<TermsOfServices/>}></Route>
+          <Route path='/refund-policy' element={<RefundPolicy/>}></Route>
         </Routes>        
         <Footer/>
       </Router>
