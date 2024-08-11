@@ -8,6 +8,9 @@ import ScrollToTop from './components/ScrollToTop'
 import Shop from './pages/Shop/Shop'
 import AboutUs from './pages/AboutUs/AboutUs'
 import Cart from './pages/Cart/Cart'
+import Questions from './pages/Questions'
+import ContactUs from './pages/ContactUs'
+import TermsOfServices from './pages/TermsOfServices'
 
 function App() {  
   return (
@@ -21,6 +24,9 @@ function App() {
           <Route path='/shop' element={<Shop/>}></Route>
           <Route path='/about-us' element={<AboutUs/>}></Route>
           <Route path='/cart' element={<Cart/>}></Route>
+          <Route path='/Q&A' element={<Questions/>}></Route>
+          <Route path='/contact-us' element={<ContactUs/>}></Route>
+          <Route path='/terms-of-service' element={<TermsOfServices/>}></Route>
         </Routes>        
         <Footer/>
       </Router>

@@ -28,7 +28,7 @@ const DetailsProduct = () => {
     }
 
     return (
-        <div>
+        <div className="mb-12">
             <Toaster/>
             <HeaderBreadcrumb direction="Shop / Product details"/>
             <div className="mx-10">

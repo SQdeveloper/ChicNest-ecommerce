@@ -2,6 +2,7 @@ import { MinusIcon, PlusIcon } from "../../../components/ui/icons";
 import { ProductCart } from "../../../types/product";
 import { FormatPrice } from "../../../utils/FormatPrice";
 import { useProducts } from "../../../contexts/products";
+import { Link } from "react-router-dom";
 
 interface Props {
     product: ProductCart
@@ -10,7 +11,7 @@ interface Props {
 type action = 'plus'| 'minus' ;
 
 const ProductOfCart: React.FC<Props> = ({product}) => {
-    const { title, price, images, brand, categories, amountInCart } = product;    
+    const { title, priceOffer, isOffer, price, images, brand, categories, amountInCart } = product;    
     const { productsCart, setProductsCart } = useProducts();
 
     const handleModifyProductCart = (action: action)=>{                
@@ -40,12 +41,14 @@ const ProductOfCart: React.FC<Props> = ({product}) => {
     }
 
     return (
-        <div className="flex bg-white rounded-md overflow-hidden">
-            <img 
-                src={images[0].src} 
-                alt="product" 
-                className="w-[50%] aspect-square object-cover object-center p-2 border-r"
-            />
+        <div className="grid grid-cols-2 bg-white rounded-md overflow-hidden">
+            <Link className="flex aspect-square" to={`/details/${product.id}`}>
+                <img 
+                    src={images[0].src} 
+                    alt="product" 
+                    className="aspect-square object-cover object-center p-2 border-r"
+                />
+            </Link>
             <aside className="flex flex-col w-full">
                 <div className="px-3 font-primary text-xl py-3 border-b w-full">
                     <h2>{title}</h2>
@@ -72,12 +75,12 @@ const ProductOfCart: React.FC<Props> = ({product}) => {
                             </button>
                         </div>
                         <span>
-                            $ {FormatPrice(price)}
+                            $ {FormatPrice(isOffer ? priceOffer : price)}
                         </span>
                     </div>
                 </div>
                 <div className="font-secondary text-sm flex border-t">
-                    <button className="w-[50%] py-2 px-1 border-r">View Details</button>
+                    <Link to={`/details/${product.id}`} className="text-center w-[50%] py-2 px-1 border-r">View Details</Link>
                     <button onClick={handleDeleteProduct} className="w-[50%] py-2 px-1 ">Delete</button>
                 </div>
             </aside>

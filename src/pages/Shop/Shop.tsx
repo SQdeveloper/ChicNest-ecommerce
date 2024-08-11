@@ -82,7 +82,7 @@ const Shop = () => {
     }
 
     return (
-        <div>
+        <div className="mb-12">
             <HeaderBreadcrumb direction="Shop" />            
             <div className="mt-12 mx-10">
                 <BenefitsSection/>

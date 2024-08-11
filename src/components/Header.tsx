@@ -17,7 +17,7 @@ const Header = () => {
                         <Link className="ancle-style" to={'/about-us'}>About Us</Link>
                     </li>
                     <li>
-                        <Link className="ancle-style" to={''}>Pages</Link>
+                        <Link className="ancle-style" to={'/contact-us'}>Contact Us</Link>
                     </li>
                 </ul>
             </nav>

@@ -56,7 +56,7 @@ const Home = () => {
                 <PromotionSection/>
             </div>            
             <BannerSection/>
-            <div className="mt-16 mx-10">
+            <div className="mb-12 mt-16 mx-10">
                 <InstragramSection/>
             </div>     
         </>        

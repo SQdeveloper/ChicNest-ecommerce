@@ -7,6 +7,7 @@ const Acordeon = () => {
             {
                 questions.map((question, index) => (
                     <InputQuestion 
+                        key={index}
                         id={`question${index}`}
                         name="questions"
                         question={question.question}                

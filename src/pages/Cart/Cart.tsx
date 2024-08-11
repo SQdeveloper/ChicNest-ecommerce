@@ -3,12 +3,30 @@ import { ShieldIcon } from "../../components/ui/icons";
 import ProductOfCart from "./components/ProductOfCart";
 import { ProductCart } from "../../types/product";
 import { useProducts } from "../../contexts/products";
+import { useEffect, useState } from "react";
+import { FormatPrice } from "../../utils/FormatPrice";
 
 const Cart = () => {    
     const { productsCart } = useProducts();
+    const [subtotal, setSubtotal] = useState(0);
+
+    const getTotalPrice = ()=>{
+        let subtotal = 0;
+
+        productsCart.forEach(product => {
+           const price = product.isOffer ? product.priceOffer : product.price; 
+           subtotal += price * product.amountInCart;
+        })
+
+        setSubtotal(subtotal)
+    }
+
+    useEffect(()=>{
+        getTotalPrice();
+    },[productsCart])
 
     return (
-        <div className="flex">
+        <div className="flex mb-12">
             <div className="px-10 py-10 w-[60%] bg-extra-light-gray">
                 <aside className="flex justify-between">
                     <h2 className="text-2xl font-primary">My Shopping Cart</h2>
@@ -42,19 +60,19 @@ const Cart = () => {
                 <div className="py-8 border-b px-10">
                     <div className="flex justify-between gap-4">
                         <span>Subtotal</span>
-                        <span>$ 400,00</span>
+                        <span>$ {FormatPrice(subtotal)}</span>
                     </div>
                     <div className="mt-4 flex justify-between gap-4">
                         <span>Delivery</span>
-                        <span>$ 400,00</span>
+                        <span>$ 15,00</span>
                     </div>
                     <div className="mt-4 flex justify-between gap-4">
                         <span>Total</span>
-                        <span>$ 400,00</span>
+                        <span>$ {FormatPrice(subtotal + 15)}</span>
                     </div>
                     <div className="mt-8 flex flex-col gap-4">
-                        <button className="bg-brown rounded-full py-2 px-2 text-white">Advance Payment</button>
-                        <button className="bg-brown rounded-full py-2 px-2 text-white">Paypal</button>
+                        <button className="bg-brown hover:opacity-[80%] transition-all rounded-full py-2 px-2 text-white">Advance Payment</button>
+                        <button className="paypal rounded-full py-2 px-2 text-white">Paypal</button>
                     </div>
                 </div>
                 <div className="px-10 pt-4">

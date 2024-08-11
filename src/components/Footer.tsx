@@ -3,7 +3,7 @@ import Button from "./ui/Button";
 
 const Footer = () => {
     return (
-        <footer className="bg-light-brown font-secondary px-10 py-10 flex gap-5 justify-between mt-12">
+        <footer className="bg-light-brown font-secondary px-10 py-10 flex gap-5 justify-between">
             <div className="flex flex-col gap-4">
                 <aside>
                     <h3 className="mb-2 font-bold">Where about</h3>
@@ -22,16 +22,16 @@ const Footer = () => {
                 <h3 className="mb-2 font-bold">Pages</h3>
                 <ul className="text-sm flex flex-col gap-2 text-rat-gray">
                     <li className="w-fit">
-                        <Link className="ancle-style" to={''}>Home</Link>                        
+                        <Link className="ancle-style" to={'/'}>Home</Link>                        
                     </li>
                     <li className="w-fit">
-                        <Link className="ancle-style" to={''}>About us</Link>                        
+                        <Link className="ancle-style" to={'/about-us'}>About us</Link>                        
                     </li>
                     <li className="w-fit">
-                        <Link className="ancle-style" to={''}>Shop</Link>                        
+                        <Link className="ancle-style" to={'/shop'}>Shop</Link>                        
                     </li>
                     <li className="w-fit">
-                        <Link className="ancle-style" to={''}>Contact us</Link>                        
+                        <Link className="ancle-style" to={'/contact-us'}>Contact us</Link>                        
                     </li>
                 </ul>
             </aside>
@@ -39,13 +39,13 @@ const Footer = () => {
                 <h3 className="mb-2 font-bold">Resource</h3>
                 <ul className="text-sm flex flex-col gap-2 text-rat-gray">
                     <li className="w-fit">
-                        <Link className="ancle-style" to={''}>FAQ</Link>                        
+                        <Link className="ancle-style" to={'/Q&A'}>FAQ</Link>                        
                     </li>
                     <li className="w-fit">
                         <Link className="ancle-style" to={''}>Reviews</Link>                        
                     </li>                
                     <li className="w-fit">
-                        <Link className="ancle-style" to={''}>Return Policy</Link>                        
+                        <Link className="ancle-style" to={'/terms-of-service'}>Terms of service</Link>                        
                     </li>
                 </ul>
             </aside>
