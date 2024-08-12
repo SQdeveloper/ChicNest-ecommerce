@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { CartFillIcon, PersonFillIcon } from "./ui/icons";
 import InputSearch from "./ui/InputSearch";
+import { useProducts } from "../contexts/products";
 
 const Header = () => {
+    const { productsCart } = useProducts();
+
     return (
         <header className="w-full px-8 items-center border-b-[1px] border-light-gray flex justify-between gap-2 h-16 text-dark-gray font-secondary bg-light-brown">
             <nav>
@@ -32,9 +35,13 @@ const Header = () => {
                         to={'/cart'}
                     >
                         <CartFillIcon className="text-light-brown"/>
-                        <div className="absolute top-[-4px] right-[-4px] bg-red-500 rounded-full w-4 h-4 flex justify-center items-center text-[10px] text-white font-secondary">1</div>
+                        <div className="absolute top-[-4px] right-[-4px] bg-red-500 rounded-full w-4 h-4 flex justify-center items-center text-[10px] text-white font-secondary">
+                            {productsCart.length}
+                        </div>
                     </Link>
-                    <Link className="flex items-center justify-center rounded-full bg-brown w-8 aspect-square h-8" to={''}>
+                    <Link className="flex items-center justify-center rounded-full bg-brown w-8 aspect-square h-8" 
+                        to={'/login'}
+                    >
                         <PersonFillIcon className="text-light-brown"/>
                     </Link>
                 </div>

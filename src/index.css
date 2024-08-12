@@ -45,6 +45,10 @@
         background-color: black;        
     }
 
+    .h-without-header {
+        height: calc(100svh - 4rem);
+    }
+
     .effect-image {
         flex: 1;
         transition: flex .3s;
