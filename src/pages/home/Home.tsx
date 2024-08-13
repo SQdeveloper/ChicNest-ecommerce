@@ -73,7 +73,7 @@ const Home = () => {
                 <PromotionSection/>
             </div>            
             <BannerSection/>
-            <div className="max-sm:mx-5 max-xl:my-12 mb-12 mt-16 mx-10">
+            <div className="max-w-[1180px] mx-auto max-sm:mx-5 max-xl:my-12 mb-12 mt-16">
                 <InstragramSection/>
             </div>     
         </>        

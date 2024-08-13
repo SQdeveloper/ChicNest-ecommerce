@@ -1,6 +1,6 @@
 const InstragramSection = () => {
     return (
-        <section className="text-center max-w-[1180px] mx-auto">
+        <section className="text-center">
             <h2 className="text-4xl font-primary">Instagram Wall</h2>
             <p className="max-xl:text-xl mx-auto mt-4 mb-8 max-w-[300px] text-rat-gray font-secondary">Follow us on Instagram and be part of the Lavish story</p>
             <div className="max-sm:gap-3 grid-place gap-5">
