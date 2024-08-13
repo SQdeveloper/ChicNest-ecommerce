@@ -10,7 +10,7 @@ const ButtonStyle: React.FC<Props> = ({link = '/shop', children = 'Shop Now'}) =
     return (
         <Link  
             to={link}
-            className="group relative shadow block font-secondary text-sm w-fit text-white"
+            className="max-xl:text-[18px] group relative shadow block font-secondary text-sm w-fit text-white"
         >
             <div className="group-hover:-translate-x-[2px] group-hover:-translate-y-[2px] transition-all bg-brown z-20 flex gap-1 text-nowrap px-6 py-2 text-transparent rounded-[3px] justify-center items-center">
                 <span>{children}</span>

@@ -8,23 +8,40 @@ import PromotionSection from "./components/PromotionSection";
 import SliderSection from "../../components/SliderSection";
 import BenefitsSection from "../../components/BenefitsSection";
 import { useProducts } from "../../contexts/products";
+import { useEffect, useState } from "react";
 
 const Home = () => {
     const { products } = useProducts();        
+    const [itemsPerPage, setItemsPerPage] = useState(5);
+
+    //Cambiamos la cantidad de items por página a mostar en el slider
+    useEffect(()=>{
+        const x = innerWidth;
+            if(x <= 600) return setItemsPerPage(1);
+            if(x <= 900) return setItemsPerPage(3);
+            if(x <= 1280) return setItemsPerPage(4);
+
+        window.addEventListener('resize', ()=>{
+            const x = innerWidth;
+            if(x <= 600) return setItemsPerPage(1);
+            if(x <= 900) return setItemsPerPage(3);
+            if(x <= 1280) return setItemsPerPage(4);
+        })
+    },[])
 
     return (
         <>
             <Hero/>
-            <div className="px-10 text-dark-gray">
-                <div className="py-16 bg-white">
+            <div className="max-sm:px-5 max-w-[1280px] mx-auto px-10 text-dark-gray">
+                <div className="max-sm:py-2 max-[800px]:py-10 max-xl:py-12 py-16 bg-white">
                     <BenefitsSection/>
                 </div>
-                <section className="relative flex gap-8 justify-between items-center">
-                    <div className="flex gap-4 rounded-md bg-extra-light-gray w-[50%] justify-between items-center">
-                        <aside className="font-secondary pl-8 py-6 ">
-                            <h3 className="font-primary text-2xl">Luxe Abundance</h3>
-                            <p className="mt-2 mb-5 text-rat-gray">Get 20% off with our code: LUXE20</p>
-                            <Link className="text-brown flex gap-2" to={''}>
+                <section className="max-[800px]:flex-col relative flex gap-8 justify-between items-center">
+                    <div className="max-sm:flex-col max-[800px]:w-full flex gap-4 rounded-md bg-extra-light-gray w-[50%] justify-between items-center">
+                        <aside className="font-secondary max-sm:pl-0 pl-8 py-6 max-sm:text-center">
+                            <h3 className="max-sm:text-3xl font-primary text-2xl">Luxe Abundance</h3>
+                            <p className="max-sm:text-[18px] mt-4 mb-5 text-rat-gray">Get 20% off with our code: LUXE20</p>
+                            <Link className="max-sm:mx-auto max-sm:w-fit max-sm:text-[18px] text-brown flex gap-2" to={'/shop'}>
                                 View full collection
                                 <ArrowRightIcon className="w-4"/>
                             </Link>
@@ -35,11 +52,11 @@ const Home = () => {
                             alt="banner" 
                         />
                     </div>
-                    <div className="flex gap-4 rounded-md bg-extra-light-gray w-[50%] justify-between items-center">
-                        <aside className="font-secondary pl-8 py-6 ">
-                            <h3 className="font-primary text-2xl">Luxe Abundance</h3>
-                            <p className="mt-2 mb-5 text-rat-gray">Get 20% off with our code: LUXE20</p>                        
-                            <Link className="text-brown flex gap-2" to={''}>
+                    <div className="max-sm:flex-col max-[800px]:w-full flex gap-4 rounded-md bg-extra-light-gray w-[50%] justify-between items-center">
+                        <aside className="font-secondary max-sm:pl-0 pl-8 py-6 max-sm:text-center">
+                            <h3 className="max-sm:text-3xl font-primary text-2xl">Sparkle in Love</h3>
+                            <p className="max-sm:text-[18px] mt-4 mb-5 text-rat-gray">Make her say yes with our 50% off rings</p>                        
+                            <Link className="max-sm:mx-auto max-sm:w-fit max-sm:text-[18px] text-brown flex gap-2" to={'/shop'}>
                                 View full collection
                                 <ArrowRightIcon className="w-4"/>
                             </Link>
@@ -51,12 +68,12 @@ const Home = () => {
                         />
                     </div>
                 </section>                
-                <SliderSection itemsPerPage={5} products={products.slice(0,10)}/>                             
+                <SliderSection itemsPerPage={itemsPerPage} products={products.slice(0,10)}/>                             
                 <FeaturedSection/>
                 <PromotionSection/>
             </div>            
             <BannerSection/>
-            <div className="mb-12 mt-16 mx-10">
+            <div className="max-sm:mx-5 max-xl:my-12 mb-12 mt-16 mx-10">
                 <InstragramSection/>
             </div>     
         </>        

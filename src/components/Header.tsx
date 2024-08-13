@@ -7,8 +7,11 @@ const Header = () => {
     const { productsCart } = useProducts();
 
     return (
-        <header className="w-full px-8 items-center border-b-[1px] border-light-gray flex justify-between gap-2 h-16 text-dark-gray font-secondary bg-light-brown">
-            <nav>
+        <header className="max-sm:px-5 w-full px-8 items-center border-b-[1px] border-light-gray flex justify-between gap-2 h-16 text-dark-gray font-secondary bg-light-brown">
+            <div className="hidden max-[1000px]:block">
+                menu
+            </div>
+            <nav className="max-[1000px]:hidden">
                 <ul className="flex items-center gap-4 text-md">
                     <li>
                         <Link className="ancle-style" to={'/'}>Home</Link>
@@ -28,7 +31,7 @@ const Header = () => {
                 <h1 className="font-bold text-3xl font-primary">ChicNest</h1>
             </Link>
             <div className="flex items-center gap-7">
-                <InputSearch placeholder="Search..."/>
+                <InputSearch className="max-[1000px]:hidden" placeholder="Search..."/>
                 <div className="flex items-center gap-4">
                     <Link 
                         className="flex items-center relative justify-center rounded-full bg-brown w-8 aspect-square h-8" 

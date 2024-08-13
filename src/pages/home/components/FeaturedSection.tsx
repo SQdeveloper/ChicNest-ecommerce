@@ -16,15 +16,15 @@ const FeaturedSection = () => {
     }, [products])
 
     return (
-        <section className="my-16">
+        <section className="max-xl:my-12 my-16">
             <h2 className="mb-7 text-4xl font-medium font-primary">Featured Products</h2>
-            <div className="flex gap-4">
+            <div className="max-[800px]:flex-col flex gap-4">
                 <img 
                     src="../../src/assets/images/model_featured.jpg" 
                     alt="person banner" 
-                    className="rounded-md object-center overflow-hidden object-cover w-[50%] aspect-[7/6]"
+                    className="max-[800px]:aspect-square max-[800px]:w-full rounded-md object-center overflow-hidden object-cover w-[50%] aspect-[7/6]"
                 />
-                <div className="w-[50%] gap-4 grid grid-cols-2 grid-rows-2">
+                <div className="max-sm:grid-cols-1 max-[800px]:w-full w-[50%] gap-4 grid grid-cols-2 grid-rows-2">
                     {
                         productsToShow && productsToShow.length > 0 && 
                             productsToShow.map(product => (

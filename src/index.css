@@ -15,7 +15,7 @@
     }
 
     .height-svh {
-        height: calc(100svh - 4rem);
+        min-height: calc(100svh - 4rem);
     }        
 
     .style-card-cardBenefits {
@@ -24,8 +24,20 @@
 
     .grid-place {
         display: grid;
-        grid-template-columns: repeat(4, minmax(300px, 1fr));        
+        grid-template-columns: repeat(4, minmax(100px, 1fr));        
     }    
+    
+    @media (max-width: 800px) {
+        .grid-place {            
+            grid-template-columns: repeat(3, minmax(100px, 1fr));        
+        }
+    }
+
+    @media (max-width: 500px) {
+        .grid-place {            
+            grid-template-columns: repeat(2, minmax(100px, 1fr));        
+        }
+    }
 
     h2 {
         @apply text-dark-gray;

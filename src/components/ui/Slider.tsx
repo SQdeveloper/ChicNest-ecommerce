@@ -90,24 +90,32 @@ const Slider: React.FC<Props> = ({itemsPerPage, items}) => {
                                     className="w-[75%] h-auto object-cover"
                                 />
                                 <div className="justify-between bg-white px-2 py-3 w-full mb-1 rounded-sm flex gap-2 items-start">
-                                    <div className="text-sm font-bold">
+                                    <div className="max-lg:text-xl text-sm font-bold">
                                         <h4 className="text-rat-gray mb-2">{product.title}</h4>
                                         <div className="flex gap-2 items-center">
                                             <span>$ {FormatPrice(product.price)}</span>                                
                                             {
-                                                product.isOffer && <span className="text-xs mb-[2px] text-light-gray">$ {FormatPrice(product.priceOffer)} USD</span>
+                                                product.isOffer && <span className="max-lg:text-sm text-xs mb-[2px] text-light-gray">$ {FormatPrice(product.priceOffer)} USD</span>
                                             }                                    
                                         </div>
                                     </div>
-                                    <ArrowRightIcon className="rounded-full p-1 border border-brown w-6 text-brown"/>
+                                    <ArrowRightIcon className="max-lg:w-8 rounded-full p-1 border border-brown w-6 text-brown"/>
                                 </div>
                             </Link>                                                                                                                                                                        
                         ))
                     }
                 </div>  
             </div>
-            <ButtonLeft className="absolute left-0 top-[50%] translate-y-[-50%]" HandleButtonLeft={HandleButtonLeft}/>
-            <ButtonRight className="absolute right-0 top-[50%] translate-y-[-50%]" HandleButtonRight={HandleButtonRight}/>
+            <ButtonLeft 
+                disabled={number === 0} 
+                className={`max-sm:w-10 max-sm:h-10 ${number === 0 && 'hidden'} absolute left-0 top-[50%] translate-y-[-50%]`}
+                HandleButtonLeft={HandleButtonLeft}
+            />
+            <ButtonRight 
+                disabled={number === totalItems - itemsPerPage} 
+                className={`max-sm:w-10 max-sm:h-10 ${number === totalItems - itemsPerPage && 'hidden'} absolute right-0 top-[50%] translate-y-[-50%]`}
+                HandleButtonRight={HandleButtonRight}
+            />
         </section>
     );
 };
