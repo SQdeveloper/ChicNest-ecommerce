@@ -18,8 +18,10 @@ const Home = () => {
     useEffect(()=>{
         const x = innerWidth;
             if(x <= 600) return setItemsPerPage(1);
+            if(x <= 768) return setItemsPerPage(2);
             if(x <= 900) return setItemsPerPage(3);
             if(x <= 1280) return setItemsPerPage(4);
+            if(x > 1280) return setItemsPerPage(5)
 
         window.addEventListener('resize', ()=>{
             const x = innerWidth;

@@ -10,7 +10,7 @@ import { Product } from "../../types/product";
 import useFilters from "./hooks/useFilters";
 import useDebounce from "../../hooks/useDebounce";
 import RangeSlider from "../../components/ui/rangeSlider";
-import { FilterIcon, PlusIcon, SearchIcon } from "../../components/ui/icons";
+import { CloseIcon, FilterIcon, SearchIcon } from "../../components/ui/icons";
 
 const Shop = () => {
     const [productsToShow, setProductsToShow] = useState<Product[]>();
@@ -88,16 +88,16 @@ const Shop = () => {
             <div className="max-[450px]:mx-4 max-[768px]:my-3 max-[1024px]:mb-10 max-[1280px]:mx-12 max-w-[1280px] mx-auto mt-12">
                 <BenefitsSection/>
                 <div className="max-[600px]:mt-6 flex mt-10 gap-10 w-full max-w-[1300px]">
-                    <div className={`${openFilters && 'translate-x-0'} duration-500 transition-all max-[1024px]:-translate-x-full max-[1024px]:py-10 max-[1024px]:px-10 z-50 top-0 left-0 max-[1024px]:w-full max-[1024px]:min-h-full max-[1024px]:fixed bg-white`}>
+                    <div className={`max-md:py-16 max-md:px-6 ${openFilters ? 'translate-x-0': 'max-[1024px]:-translate-x-full'} duration-500 transition-all max-[1024px]:py-10 max-[1024px]:px-10 z-50 top-0 left-0 max-[1024px]:w-full max-[1024px]:min-h-full max-[1024px]:fixed bg-white`}>
                         <button 
                             onClick={()=>{setOpenFilters(false)}}
-                            className="hidden max-[1024px]:block bg-brown rounded-full p-2 absolute right-4 top-4"
+                            className="max-md:top-5 max-md:right-3 hidden max-[1024px]:block bg-brown rounded-full p-2 absolute right-4 top-4"
                         >
-                            <PlusIcon className="w-4 h-4 text-white"/>
+                            <CloseIcon className="w-6 h-6 text-white"/>
                         </button>
-                        <div className="max-[1024px]:gap-4 max-[1024px]:grid max-[1024px]:grid-cols-3 max-[1024px]:w-full w-[250px] font-secondary">
+                        <div className="max-md:grid-cols-1 max-[1024px]:gap-4 max-[1024px]:grid max-[1024px]:grid-cols-3 max-[1024px]:w-full w-[250px] font-secondary">
                             <aside>
-                                <h2 className="camelcase mb-2 font-primary text-xl">Product by category</h2>
+                                <h2 className="max-xl:text-3xl camelcase mb-2 font-primary text-xl">Product by category</h2>
                                 <form className="w-full">                                
                                     <Checkbox onChange={handleChangeCategories} name="women" text="Women" htmlFor="women"/>                                
                                     <Checkbox onChange={handleChangeCategories} name="earrings" text="Earrings" htmlFor="earrings"/>                                
@@ -108,7 +108,7 @@ const Shop = () => {
                                 </form>
                             </aside>
                             <aside className="max-[1024px]:mt-0 mt-6 w-full">
-                                <h2 className="camelcase mb-2 font-primary text-xl">Brand by category</h2>
+                                <h2 className="max-xl:text-3xl camelcase mb-2 font-primary text-xl">Brand by category</h2>
                                 <form className="w-full">                                
                                     <Checkbox onChange={handleChangeBrands} name="Boucheron" text="Boucheron" htmlFor="Boucheron"/>                                                            
                                     <Checkbox onChange={handleChangeBrands} name="Mikimoyo" text="Mikimoyo" htmlFor="Mikimoyo"/>                                                            
@@ -118,10 +118,10 @@ const Shop = () => {
                                 </form>
                             </aside>
                             <aside className="max-[1024px]:mt-0 mt-6 w-full">
-                                <h2 className="camelcase mb-3 font-primary text-xl">Price</h2>                            
+                                <h2 className="max-xl:text-3xl camelcase mb-3 font-primary text-xl">Price</h2>                            
                                 <RangeSlider values={values} setValues={setValues}/>
                                 <button 
-                                    className="font-secondary bg-brown text-white px-1 py-2 w-full rounded-md hover:opacity-[80%] mt-3"
+                                    className="max-xl:text-xl font-secondary bg-brown text-white px-1 py-2 w-full rounded-md hover:opacity-[80%] mt-3"
                                     onClick={handleApplyPriceFilter}
                                 >
                                         Apply filter
@@ -132,29 +132,37 @@ const Shop = () => {
                     <div className="flex flex-col gap-8 flex-1">
                         <div className="flex max-[450px]:flex-col max-[450px]:gap-4 max-[450px]:items-end justify-between w-full">
                             <div className="max-[450px]:w-full flex gap-4">
-                                <button 
-                                    onClick={()=>{setOpenFilters(true)}}
-                                    className="max-[1024px]:block hidden"
-                                >
-                                    <FilterIcon className="w-8 h-8"/>
-                                </button>
                                 <InputSearch 
                                     onChange={handleSearch} 
                                     className="max-[1024px]:h-[2.8rem] max-[1024px]:text-[17px] max-[450px]: max-[450px]:w-full w-[325px]" 
                                     placeholder="Search for products..."
                                 />
+                                <button 
+                                    onClick={()=>{setOpenFilters(true)}}
+                                    className="max-md:hidden max-[1024px]:block hidden"
+                                >
+                                    <FilterIcon className="w-8 h-8"/>
+                                </button>
                             </div>
-                            <div className="flex gap-4">
-                                <ButtonLeft 
-                                    disabled={page === 1 && true}
-                                    className={`${page === 1 && 'cursor-not-allowed opacity-[30%] hover:bg-transparent hover:text-brown'}`} 
-                                    HandleButtonLeft={handleClickArrowLeft}
+                            <div className="flex max-md:w-full max-md:justify-between">
+                                <button 
+                                    onClick={()=>{setOpenFilters(true)}}
+                                    className="max-md:block hidden"
+                                >
+                                    <FilterIcon className="w-8 h-8"/>
+                                </button>
+                                <div className="flex gap-4">
+                                    <ButtonLeft 
+                                        disabled={page === 1 && true}
+                                        className={`${page === 1 && 'cursor-not-allowed opacity-[30%] hover:bg-transparent hover:text-brown'}`} 
+                                        HandleButtonLeft={handleClickArrowLeft}
+                                        />
+                                    <ButtonRight
+                                        disabled={page === numPages && true}
+                                        className={`${page === numPages && 'cursor-not-allowed opacity-[30%] hover:bg-transparent hover:text-brown'}`} 
+                                        HandleButtonRight={handleClickArrowRight}
                                     />
-                                <ButtonRight
-                                    disabled={page === numPages && true}
-                                    className={`${page === numPages && 'cursor-not-allowed opacity-[30%] hover:bg-transparent hover:text-brown'}`} 
-                                    HandleButtonRight={handleClickArrowRight}
-                                />
+                                </div>
                             </div>
                         </div>
                             {
