@@ -1,7 +1,7 @@
 const RefundPolicy = () => {
     return (
-        <div className="font-secondary text-center my-12 max-w-[1000px] mx-auto">
-            <h2 className="font-primary text-3xl">Refund Policy</h2>
+        <div className="max-sm:my-10 max-sm:mx-5 max-lg:mx-8 max-xl:mx-12 font-secondary text-center my-12 max-w-[1000px] mx-auto">
+            <h2 className="max-sm:text-4xl font-primary text-3xl">Refund Policy</h2>
             <div className="mt-6 flex flex-col gap-8">
                 <aside className="text-start flex flex-col gap-2">
                     <h3 className="text-2xl">Change a product by size or model - LIMA</h3>
