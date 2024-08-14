@@ -13,7 +13,7 @@ interface Props {
 const SliderSectionType2: React.FC<Props> = ({itemsPerPage, items}) => {
     const [number, setNumber] = useState(0)
     const [numPages, setNumPages] = useState(1);
-    const totalItems = items.length;
+    const totalItems = items.length;    
 
     //Obtenemos el total de páginas
     useEffect(()=>{
@@ -45,21 +45,23 @@ const SliderSectionType2: React.FC<Props> = ({itemsPerPage, items}) => {
     }, [number])
     
     return (
-        <section className="w-full mt-10 text-dark-gray">
+        <section className="max-sm:mt-16 w-full mt-10 text-dark-gray">
             <div className="flex justify-between gap-6">
-                <h2 className="text-3xl font-primary mb-5">Related Products</h2>
+                <h2 className="leading-[50px] max-sm:text-5xl text-3xl font-primary mb-5">Related Products</h2>
                 <div className="flex gap-4">
                     <button
-                    onClick={HandleButtonLeft} 
-                    className="hover:bg-brown transition-all hover:text-white text-dark-gray flex justify-center items-center border border-brown bg-extra-light-gray rounded-full w-8 h-8"                
+                        disabled={number === 0} 
+                        onClick={HandleButtonLeft} 
+                        className={`${number === 0 && 'hover:text-dark-gray cursor-not-allowed opacity-[30%] hover:bg-transparent'} hover:bg-brown transition-all hover:text-white text-dark-gray flex justify-center items-center border border-brown bg-extra-light-gray rounded-full w-8 h-8 max-sm:w-10 max-sm:h-10`}
                     >
-                        <ChevronLeftIcon className="w-5 h-5 "/>
+                        <ChevronLeftIcon className="max-sm:w-8 max-sm:h-8 w-5 h-5 "/>
                     </button>
                     <button
+                        disabled={number === totalItems - itemsPerPage} 
                         onClick={HandleButtonRight} 
-                        className="hover:bg-brown transition-all hover:text-white text-dark-gray flex justify-center items-center border border-brown bg-extra-light-gray rounded-full w-8 h-8"
+                        className={`${number === totalItems - itemsPerPage && 'hover:text-dark-gray cursor-not-allowed opacity-[30%] hover:bg-transparent'}transition-all hover:text-white text-dark-gray flex justify-center items-center border border-brown hover:bg-brown bg-extra-light-gray rounded-full w-8 h-8 max-sm:w-10 max-sm:h-10`}
                         >
-                        <ChevronRightIcon className="w-5 h-5 "/>                
+                        <ChevronRightIcon className="max-sm:w-8 max-sm:h-8 w-5 h-5 "/>                
                     </button>
                 </div>
             </div>
@@ -74,7 +76,7 @@ const SliderSectionType2: React.FC<Props> = ({itemsPerPage, items}) => {
                             >
                                 {
                                     product.isOffer &&
-                                    <div className="rounded-full px-4 text-sm font-secondary py-1 absolute top-3 left-3 bg-brown text-white">
+                                    <div className="max-sm:text-[16px] rounded-full px-4 text-sm font-secondary py-1 absolute top-3 left-3 bg-brown text-white">
                                         - {calculateDiscount(product.price, product.priceOffer)} %
                                     </div>
                                 }
@@ -83,16 +85,16 @@ const SliderSectionType2: React.FC<Props> = ({itemsPerPage, items}) => {
                                     className="w-[75%] h-auto object-cover"
                                 />
                                 <div className="justify-between bg-white px-2 py-3 w-full mb-1 rounded-sm flex gap-2 items-start">
-                                    <div className="text-sm font-bold">
+                                    <div className="max-md:text-xl text-sm font-bold">
                                         <h4 className="text-rat-gray mb-2">{product.title}</h4>
                                         <div className="flex gap-2 items-center">
                                             <span>$ {FormatPrice(product.price)}</span>                                
                                             {
-                                                product.isOffer && <span className="text-xs mb-[2px] text-light-gray">$ {FormatPrice(product.priceOffer)} USD</span>
+                                                product.isOffer && <span className="max-sm:text-sm text-xs mb-[2px] text-light-gray">$ {FormatPrice(product.priceOffer)} USD</span>
                                             }                                    
                                         </div>
                                     </div>
-                                    <ArrowRightIcon className="rounded-full p-1 border border-brown w-6 text-brown"/>
+                                    <ArrowRightIcon className="max-sm:w-8 rounded-full p-1 border border-brown w-6 text-brown"/>
                                 </div>
                             </Link>                                               
                         ))

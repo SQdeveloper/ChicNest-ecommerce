@@ -154,12 +154,12 @@ const Shop = () => {
                                 <div className="flex gap-4">
                                     <ButtonLeft 
                                         disabled={page === 1 && true}
-                                        className={`${page === 1 && 'cursor-not-allowed opacity-[30%] hover:bg-transparent hover:text-brown'}`} 
+                                        className={`${page === 1 && 'cursor-not-allowed opacity-[30%] hover:bg-transparent hover:text-dark-gray'}`} 
                                         HandleButtonLeft={handleClickArrowLeft}
                                         />
                                     <ButtonRight
                                         disabled={page === numPages && true}
-                                        className={`${page === numPages && 'cursor-not-allowed opacity-[30%] hover:bg-transparent hover:text-brown'}`} 
+                                        className={`${page === numPages && 'cursor-not-allowed opacity-[30%] hover:bg-transparent hover:text-dark-gray'}`} 
                                         HandleButtonRight={handleClickArrowRight}
                                     />
                                 </div>
