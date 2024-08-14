@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { CartFillIcon, FacebookIcon, GoogleIcon, LinkedinkIcon, PersonFillIcon } from "./ui/icons";
 import InputSearch from "./ui/InputSearch";
 import { useProducts } from "../contexts/products";
-import { ChangeEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
     const { productsCart } = useProducts();
@@ -20,6 +20,7 @@ const Header = () => {
 
     const closeModal = ()=>{
         setChecked(false)
+        setScroll(true)
     }
 
     return (

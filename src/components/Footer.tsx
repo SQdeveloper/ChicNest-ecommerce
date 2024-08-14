@@ -68,10 +68,10 @@ const Footer = () => {
                     </ul>
                 </aside> */}
                 <aside className="max-[800px]:col-start-2 max-[800px]:col-end-3 max-[800px]:row-start-1 max-[800px]:-end-2">
-                    <h3 className="max-sm:text-2xl mb-2 font-bold">Subscribe</h3>
+                    <h3 className="max-sm:mb-3 max-sm:text-2xl mb-2 font-bold">Subscribe</h3>
                     <form className="max-sm:w-full w-64 flex flex-col gap-4" action="">
-                        <input className="max-sm:h-12 max-sm:text-xl text-sm border border-rat-gray px-3 bg-transparent rounded-full py-2" placeholder="Enter your name" type="text" />
-                        <input className="max-sm:h-12 max-sm:text-xl text-sm border border-rat-gray px-3 bg-transparent rounded-full py-2" placeholder="Enter email" type="text" />
+                        <input className="max-sm:h-[2.7rem] max-sm:text-xl text-sm border border-rat-gray px-3 bg-transparent rounded-full py-2" placeholder="Enter your name" type="text" />
+                        <input className="max-sm:h-[2.7rem] max-sm:text-xl text-sm border border-rat-gray px-3 bg-transparent rounded-full py-2" placeholder="Enter email" type="text" />
                         <Button className="max-sm:h-12 max-sm:text-xl w-full">Submit</Button>
                     </form>
                 </aside>
