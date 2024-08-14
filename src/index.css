@@ -86,4 +86,14 @@
             grid-template-columns: repeat(1, minmax(100px, 1fr));        
         }
     }
+
+    .active-animation > div:first-child {
+        @apply translate-y-2 rotate-45
+    }
+    .active-animation > div:nth-child(2) {
+        @apply -translate-x-16 opacity-0
+    }
+    .active-animation > div:nth-child(3) {
+        @apply -translate-y-2 -rotate-45
+    }
 }
