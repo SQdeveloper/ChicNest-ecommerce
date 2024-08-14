@@ -41,19 +41,19 @@ const ProductOfCart: React.FC<Props> = ({product}) => {
     }
 
     return (
-        <div className="grid grid-cols-2 bg-white rounded-md overflow-hidden">
+        <div className="max-sm:grid-cols-1 grid grid-cols-2 bg-white rounded-md overflow-hidden">
             <Link className="flex aspect-square" to={`/details/${product.id}`}>
                 <img 
                     src={images[0].src} 
                     alt="product" 
-                    className="aspect-square object-cover object-center p-2 border-r"
+                    className="max-sm:border-b w-full aspect-square object-cover object-center p-2 border-r"
                 />
             </Link>
             <aside className="flex flex-col w-full">
-                <div className="px-3 font-primary text-xl py-3 border-b w-full">
+                <div className="max-sm:text-2xl px-3 font-primary text-xl py-3 border-b w-full">
                     <h2>{title}</h2>
                 </div>
-                <div className="flex flex-col text-sm h-full justify-between px-3 font-secondary">
+                <div className="max-sm:text-xl max-sm:gap-6 flex flex-col text-sm h-full justify-between px-3 font-secondary">
                     <div className="mt-4 flex flex-col gap-3">
                         <div className="flex justify-between items-center">
                             <span>Brands:</span>
@@ -79,8 +79,8 @@ const ProductOfCart: React.FC<Props> = ({product}) => {
                         </span>
                     </div>
                 </div>
-                <div className="font-secondary text-sm flex border-t">
-                    <Link to={`/details/${product.id}`} className="text-center w-[50%] py-2 px-1 border-r">View Details</Link>
+                <div className="max-sm:text-xl font-secondary text-sm flex border-t">
+                    <Link to={`/details/${product.id}`} className="max-sm:py-3 text-center w-[50%] py-2 px-1 border-r">View Details</Link>
                     <button onClick={handleDeleteProduct} className="w-[50%] py-2 px-1 ">Delete</button>
                 </div>
             </aside>
